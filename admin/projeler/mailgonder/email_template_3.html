@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARSA MAİL</title>
+    <style>
+        .email-container {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .email-content {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .email-header {
+            background-color: #009879;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .email-body {
+            padding: 20px;
+        }
+
+        .email-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        /* Tablo Stili */
+        .email-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .email-table th,
+        .email-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .email-table th {
+            background-color: #009879;
+            color: white;
+        }
+
+        .email-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .email-table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-content">
+            <div class="email-header">
+                <h1>YEN&#304; &#304;LAN DUYURUSU</h1>
+            </div>
+            <div class="email-body">
+                <p>Merhaba {AD} {SOYAD},</p>
+                <p>Emlak Projede Yeni &#304;lanlar Seni ve Aileni Beklemekte. Siz Değerli Müşterilerimizi Memnun Edecek Her Türlü Fiyat Konusunda Bir Araya
+                     Gelme Fırsatını Kaçırmayın.</p>
+            </div>
+        </div>
+        <br><br>
+        <table class='email-table' border='1'>
+            <tr>
+                <td>Resim-1</td>
+                <td> <img src="{resim}" style="width:300px;" alt="">  </td>
+            </tr>
+            <tr>
+                <td>Resim-2</td>
+                <td><img src="{resim_iki}"  style="width:300px;" alt=""></td>
+            </tr>
+            <tr>
+                <td>Resim-3</td>
+                <td><img src="{resim_uc}"  style="width:300px;" alt=""></td>
+            </tr>
+            <tr>
+                <td>Resim-4</td>
+                <td><img src="{resim_dort}"  style="width:300px;" alt=""></td>
+            </tr>
+            <tr>
+                <td>&#304;lan Giriş Tarihi</td>
+                <td>{İlanGirisTarihi}</td>
+            </tr>
+            <tr>
+                <td>&#304;lan Güncellenme Tarihi</td>
+                <td>{İlanGuncellenmeTarihi}</td>
+            </tr>
+            <tr>
+                <td>&#304;lan Başlığı</td>
+                <td>{İlanBasligi}</td>
+            </tr>
+            <tr>
+                <td>Açıklama</td>
+                <td>{Aciklama}</td>
+            </tr>
+            <tr>
+                <td>Fiyat</td>
+                <td>{Fiyat} &#8378;</td>
+            </tr>
+            <tr>
+                <td>Kategori</td>
+                <td>{Kategori}</td>
+            </tr>
+            <tr>
+                <td>Ev Tipi</td>
+                <td>{EvTipi}</td>
+            </tr>
+            <tr>
+                <td>Metrekare</td>
+                <td>{Metrekare} m<sup>2</sup></td>
+            </tr>
+            <tr>
+                <td>Oda Sayısı</td>
+                <td>{OdaSayisi}</td>
+            </tr>
+            <tr>
+                <td>Bina Yaşı</td>
+                <td>{Binayasi}</td>
+            </tr>
+            <tr>
+                <td>Kat Sayısı</td>
+                <td>{KatSayisi}</td>
+            </tr>
+            <tr>
+                <td>Isıtma</td>
+                <td>{Isıtma}</td>
+            </tr>
+            <tr>
+                <td>Banyo Sayısı</td>
+                <td>{BanyoSayısı}</td>
+            </tr>
+            <tr>
+                <td>Eşyalı mı?</td>
+                <td>{Esyalimi}</td>
+            </tr>
+            <tr>
+                <td>Kullanım Durumu</td>
+                <td>{KullanımDurumu}</td>
+            </tr>
+            <tr>
+                <td>Site içinde mi?</td>
+                <td>{Siteicindemi}</td>
+            </tr>
+            <tr>
+                <td>Aidat</td>
+                <td>{Aidat}</td>
+            </tr>
+            <tr>
+                <td>Krediye Uygun mu?</td>
+                <td>{KrediyeUygunmu}</td>
+            </tr>
+            <tr>
+                <td>Kimden</td>
+                <td>{Kimden} TEL: {Telefon}</td>
+            </tr>
+            <tr>
+                <td>Takas</td>
+                <td>{Takas}</td>
+            </tr>
+          
+            
+        </table>    
+    </div>
+    <div class="email-footer">
+        <p>&copy; 2024 Şirket Adı. Tüm hakları saklıdır.</p>
+    </div>
+</body>
+</html>
