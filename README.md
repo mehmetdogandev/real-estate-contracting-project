@@ -1,7 +1,7 @@
 # 🏢 Emlak & Müteahhit Projesi
 
 <div align="center">
-  <img src="https://img.freepik.com/free-photo/3d-rendering-house-model_23-2150799866.jpg" alt="Emlak Projesi Banner" width="800">
+  <img src="about-images/banner.png" alt="Emlak Projesi Banner" width="800">
   
   <p align="center">
     <b>Modern, İnteraktif ve Kullanıcı Dostu Emlak & Müteahhit Platformu</b>
