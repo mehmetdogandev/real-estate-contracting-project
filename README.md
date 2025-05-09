@@ -163,7 +163,7 @@ Admin paneline giriş yapabilmek için:
 - Şifre: `test`
 
 <div align="center">
-  <img src="" alt="Admin Paneli Giriş Ekranı" width="600">
+  <img src="about-images/image001.jpg" alt="Admin Paneli Giriş Ekranı" width="600">
   <p><small>Admin Paneli Giriş Ekranı</small></p>
 </div>
 
@@ -236,7 +236,7 @@ Kullanıcılar aşağıdaki işlemleri yapabilir:
 Kullanıcılar aşağıdaki işlemleri yapabilir:
 
 1. Yeni ilan ekleme (fotoğraflar ve detaylarla)
-2. İlanlarını görüntüleme 
+2. İlanlarını görüntüleme
 3. İlanlarını düzenleme
 4. İlanlarını silme
 
