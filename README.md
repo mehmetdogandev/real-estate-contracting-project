@@ -63,7 +63,7 @@ Bu proje, emlak ve müteahhitlik sektörüne yönelik modern bir web platformu s
         <small>Kapsamlı yönetim arayüzü</small>
       </td>
       <td align="center" width="33%">
-        <img src="https://img.icons8.com/color/48/000000/mail.png" width="48px"/><br/>
+        <img src="https://w7.pngwing.com/pngs/333/868/png-transparent-mail-computer-icons-email-graphy-e-mail-miscellaneous-angle-rectangle-thumbnail.png" width="48px"/><br/>
         <b>E-posta Gönderimi</b><br/>
         <small>Toplu mail sistemi</small>
       </td>
