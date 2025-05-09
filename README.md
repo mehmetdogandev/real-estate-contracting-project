@@ -195,7 +195,7 @@ Admin paneline giriş yapabilmek için:
     </tr>
   </table>
   
-  <img src="" alt="Admin Panel" width="700">
+  <img src="about-images/image010.jpg" alt="Admin Panel" width="700">
   <p><small>Admin Kontrol Paneli</small></p>
 </div>
 
