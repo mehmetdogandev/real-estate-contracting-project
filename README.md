@@ -195,7 +195,7 @@ Admin paneline giriş yapabilmek için:
     </tr>
   </table>
   
-  <img src="about-images/image010.jpg" alt="Admin Panel" width="700">
+  <img src="" alt="Admin Panel" width="700">
   <p><small>Admin Kontrol Paneli</small></p>
 </div>
 
@@ -208,7 +208,7 @@ Admin paneline giriş yapabilmek için:
       <td><b>İlan Verme Sayfası</b></td>
     </tr>
     <tr>
-      <td><img src="" width="400"/></td>
+      <td><img src="about-images/image010.jpg" width="400"/></td>
       <td><img src="" width="400"/></td>
     </tr>
     <tr>
