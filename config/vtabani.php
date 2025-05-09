@@ -3,7 +3,7 @@
 $host = "localhost";
 $vt_adi = "emlak";
 $kullanici_adi = "root";
-$sifre = "Sadakat0236*";
+$sifre = "";
 try {
  $con = new PDO("mysql:host={$host};dbname={$vt_adi}", $kullanici_adi, $sifre,
 array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
