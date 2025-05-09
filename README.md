@@ -163,7 +163,7 @@ Admin paneline giriş yapabilmek için:
 - Şifre: `test`
 
 <div align="center">
-  <img src="https://i.imgur.com/LUhcvpK.jpg" alt="Admin Paneli Giriş Ekranı" width="600">
+  <img src="" alt="Admin Paneli Giriş Ekranı" width="600">
   <p><small>Admin Paneli Giriş Ekranı</small></p>
 </div>
 
@@ -195,7 +195,7 @@ Admin paneline giriş yapabilmek için:
     </tr>
   </table>
   
-  <img src="https://i.imgur.com/JXmKgsp.jpg" alt="Admin Panel" width="700">
+  <img src="" alt="Admin Panel" width="700">
   <p><small>Admin Kontrol Paneli</small></p>
 </div>
 
@@ -208,16 +208,16 @@ Admin paneline giriş yapabilmek için:
       <td><b>İlan Verme Sayfası</b></td>
     </tr>
     <tr>
-      <td><img src="https://i.imgur.com/XHFcr7F.jpg" width="400"/></td>
-      <td><img src="https://i.imgur.com/MNLwZyp.jpg" width="400"/></td>
+      <td><img src="" width="400"/></td>
+      <td><img src="" width="400"/></td>
     </tr>
     <tr>
       <td><b>Mesajlaşma Sistemi</b></td>
       <td><b>İlanları Görüntüleme</b></td>
     </tr>
     <tr>
-      <td><img src="https://i.imgur.com/gWDjVMc.jpg" width="400"/></td>
-      <td><img src="https://i.imgur.com/cGe9TDY.jpg" width="400"/></td>
+      <td><img src="" width="400"/></td>
+      <td><img src="" width="400"/></td>
     </tr>
   </table>
 </div>
@@ -286,7 +286,7 @@ Proje aşağıdaki ana veritabanı tablolarını kullanmaktadır:
 Admin paneli üzerinden sisteme kayıtlı kullanıcılara toplu e-posta gönderilebilir. Bu özellik, duyurular, kampanyalar ve bilgilendirmeler için idealdir.
 
 <div align="center">
-  <img src="https://i.imgur.com/1UkgQn1.jpg" alt="E-posta Sistemi" width="600">
+  <img src="" alt="E-posta Sistemi" width="600">
   <p><small>E-posta Gönderme Sistemi</small></p>
 </div>
 
