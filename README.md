@@ -209,14 +209,16 @@ Admin paneline giriş yapabilmek için:
     </tr>
     <tr>
       <td><img src="about-images/image010.jpg" width="400"/></td>
-      <td><img src="" width="400"/></td>
+      <td><img src="about-images/image014.jpg" width="400"/>
+          <img src="about-images/image018.jpg" width="400"/>
+      </td>
     </tr>
     <tr>
       <td><b>Mesajlaşma Sistemi</b></td>
       <td><b>İlanları Görüntüleme</b></td>
     </tr>
     <tr>
-      <td><img src="" width="400"/></td>
+      <td><img src="about-images/" width="400"/></td>
       <td><img src="" width="400"/></td>
     </tr>
   </table>
