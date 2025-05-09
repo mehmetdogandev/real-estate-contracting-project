@@ -226,13 +226,13 @@ foreach ($kisiler as $kisi_id) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com'; // Örnek SMTP sunucusu, kendi SMTP sunucunuzu kullanın
         $mail->SMTPAuth = true;
-        $mail->Username = 'mehmetdogan.dev@gmail.com';
-        $mail->Password = 'gavx wxyx hres bznb';
+        $mail->Username = 'your_mail_adres@gmail.com';
+        $mail->Password = 'icnx rcgc nkfb ypee';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Gönderici bilgileri
-        $mail->setFrom('mehmetdogan.dev@gmail.com', 'Emlak & Müteahit - Proje');
+        $mail->setFrom('your_mail_adres@gmail.com', 'Emlak & Müteahit - Proje');
         $mail->addAddress($email, "$ad $soyad");
         $mail->CharSet = "UTF-8";
 

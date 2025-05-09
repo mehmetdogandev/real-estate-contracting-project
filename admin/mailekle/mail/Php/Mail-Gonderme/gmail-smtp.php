@@ -20,11 +20,11 @@ $mail->SMTPSecure = 'tls'; //ssl
 $mail->Port = 587; //25 , 465 , 587
 $mail->Host = "smtp.gmail.com";
 
-$mail->Username = "mehmetdogan.dev@gmail.com";
-$mail->Password = "gavx wxyx hres bznb";
+$mail->Username = "your_mail_adres@gmail.com";
+$mail->Password = "icnx rcgc nkfb ypee";
 
 
-$mail->setFrom("mehmetdogan.dev@gmail.com");
+$mail->setFrom("your_mail_adres@gmail.com");
 $mail->addAddress("MEHMET DOĞAN");
 
 
@@ -72,11 +72,11 @@ if ($_POST) {
         $mail->Port = 587; //SSL var ise 465
         $mail->SMTPSecure = 'tls'; //ssl varsayılan = tls
         $mail->SMTPAuth = true; //smtp doğrulama ve aktifleştirme
-        $mail->Username = "mehmetdogan.dev@gmail.com";
-        $mail->Password = "gavx wxyx hres bznb";
+        $mail->Username = "your_mail_adres@gmail.com";
+        $mail->Password = "icnx rcgc nkfb ypee";
         $mail->IsSMTP();
 
-        $mail->From = "mehmetdogan.dev@gmail.com";
+        $mail->From = "your_mail_adres@gmail.com";
         $mail->FromName = $baslik;
         $mail->CharSet = "utf8";
         $mail->Subject = $konu;
