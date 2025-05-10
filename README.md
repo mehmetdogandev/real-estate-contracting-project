@@ -121,7 +121,7 @@ define("DBNAME", "emlak");
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
 $mail->Username = 'mehmetdogan.dev@gmail.com'; // Kendi e-posta adresinizle değiştirin
-$mail->Password = 'mail_sifreniz'; // Kendi şifrenizle değiştirin
+$mail->Password = 'icnx rcgc nkfb ypee'; // Kendi şifrenizle değiştirin
 ```
 
 5. **Web Sunucusuna Yükleme**

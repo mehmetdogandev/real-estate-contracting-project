@@ -18,11 +18,11 @@ $mail->SMTPSecure = 'tls'; //ssl
 $mail->Port = 587; //25 , 465 , 587
 $mail->Host = "smtp.gmail.com";
 
-$mail->Username = "kadir.ytube@gmail.com";
-$mail->Password = "Asd12345";
+$mail->Username = "mehmetdogan.dev@gmail.com";
+$mail->Password = "icnx rcgc nkfb ypee";
 
 
-$mail->setFrom("kadir.ytube@gmail.com");
+$mail->setFrom("mehmetdogan.dev@gmail.com");
 $mail->addAddress("kdrksm@gmail.com");
 
 $body = file_get_contents('./mail-template.html');

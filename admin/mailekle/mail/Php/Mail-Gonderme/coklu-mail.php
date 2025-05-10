@@ -30,7 +30,7 @@ $mail->Port = 587; //25 , 465 , 587
 $mail->Host = "smtp.gmail.com";
 
 $mail->Username = "mehmetdogan.dev@gmail.com";
-$mail->Password = "Asd12345";
+$mail->Password = "icnx rcgc nkfb ypee";
 
 
 $mail->setFrom("mehmetdogan.dev@gmail.com");
