@@ -170,8 +170,8 @@
 
                     <?php if (isset($_SESSION["loginkey"]) && $_SESSION["loginkey"] == $kadi): ?>
                         <div class="btn-group btn-group-justified" role="group" style="margin-top: 20px;">
-                            <a href="/proje/admin/ayarlar.php" class="btn btn-info"><i class="fas fa-edit"></i> Profili Düzenle</a>
-                            <a href="/proje/admin/sifre_degistir.php" class="btn btn-warning"><i class="fas fa-key"></i> Şifre Değiştir</a>
+                            <a href="/proje/admin/profil/ayarlar.php" class="btn btn-info"><i class="fas fa-edit"></i> Profili Düzenle</a>
+                            <a href="/proje/admin/profil/sifre_degistir.php" class="btn btn-warning"><i class="fas fa-key"></i> Şifre Değiştir</a>
                         </div>
                     <?php endif; ?>
                 </div>
