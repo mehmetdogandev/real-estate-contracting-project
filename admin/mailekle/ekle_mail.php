@@ -8,20 +8,7 @@
     <?php
     if ($_POST) {
         // veritabanı yapılandırma dosyasını dahil et
-        // veritabanı bağlantısı için gerekli parametreler
-        $host = "localhost";
-        $vt_adi = "emlak";
-        $kullanici_adi = "root";
-        $sifre = "";
-        try {
-         $con = new PDO("mysql:host={$host};dbname={$vt_adi}", $kullanici_adi, $sifre,
-        array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-        }
-        // hatayı göster
-        catch(PDOException $exception){
-         echo "Bağlantı hatası: " . $exception->getMessage();
-        }
-        
+      
         try {
             // kayıt ekleme sorgusu
             $sorgu = "INSERT INTO kisiler SET ad=:ad, soyad=:soyad, email=:email, son_gonderilen_email_tarih=:son_gonderilen_email_tarih";

@@ -1,4 +1,4 @@
-<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
 
 <?php
 
@@ -40,22 +40,7 @@ else
     echo "Malesef olmadi.";
 
 
-    $host = "localhost";
-$vt_adi = "emlak";
-$kullanici_adi = "root";
-$sifre = "*";
-try {
-    $con = new PDO(
-        "mysql:host={$host};dbname={$vt_adi}",
-        $kullanici_adi,
-        $sifre,
-        array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
-    );
-}
-// hatayı göster
-catch (PDOException $exception) {
-    echo "Bağlantı hatası: " . $exception->getMessage();
-}
+
 if ($_POST) {
 
     require_once 'mail/class.phpmailer.php';
@@ -176,4 +161,4 @@ if ($_POST) {
 
 
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>

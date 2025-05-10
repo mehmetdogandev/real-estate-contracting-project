@@ -1,8 +1,17 @@
 MIT License
 
-Copyright (c) [2024] [Mehmet DOĞAN]
+Copyright (c) 2024 Mehmet DOĞAN
 
 İzin verilir, kısıtlamalar olmadan, bu yazılımın ve ilgili belgelerin çoğaltılması, dağıtılması, değiştirilmesi ve kullanılmasına, sadece aşağıdaki koşulların yerine getirilmesi kaydıyla:
 
 1. Yazılımın tüm kopyalarında, orijinal lisans bildirimi ve bu izin bildirimini içeren bir kopya eklenmelidir.
-2. Bu yazılım "olduğu gibi" sağlanmakta olup, hiçbir garanti verilmemektedir.
+
+2. Bu yazılım "olduğu gibi" sağlanmakta olup, açık veya zımni hiçbir garanti verilmemektedir. Yazılımın kalitesi, belirli bir amaca uygunluğu, ihlal etmemesi veya başka nedenlerle ilgili hiçbir garanti verilmez.
+
+3. Hiçbir durumda yazarlar veya telif hakkı sahipleri, yazılımın kullanımından, yazılımla bağlantılı veya yazılımdan kaynaklanan herhangi bir iddia, zarar veya diğer yükümlülüklerden sorumlu tutulamaz. Bu yazılımı kullanarak, bu sorumluluk reddini kabul etmiş sayılırsınız.
+
+4. Bu lisans, yazılımın ticari amaçlarla kullanımı dahil olmak üzere her türlü kullanımına izin verir.
+
+5. Bu lisans, yazılımın değiştirilmiş sürümlerinin dağıtılmasına da izin verir, ancak değişiklikler açıkça belirtilmelidir.
+
+BU YAZILIM, HERHANGİ BİR ÖZEL AMAÇ İÇİN UYGUNLUĞUNA DAİR ZIMNİ GARANTİLER DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE, HİÇBİR GARANTİ VERİLMEKSİZİN "OLDUĞU GİBİ" SAĞLANMAKTADIR. HİÇBİR DURUMDA YAZARLAR VEYA TELİF HAKKI SAHİPLERİ, SÖZLEŞME, HAKSIZ FİİL VEYA BAŞKA BİR ŞEKİLDE, BU YAZILIMIN KULLANIMINDAN VEYA DİĞER İŞLEMLERDEN KAYNAKLANAN HERHANGİ BİR İDDİA, ZARAR VEYA DİĞER SORUMLULUKTAN SORUMLU TUTULAMAZ.

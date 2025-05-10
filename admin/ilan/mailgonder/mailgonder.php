@@ -19,22 +19,9 @@ function imageToBase64($imagePath)
 $ilanId = isset($_GET['id']) ? $_GET['id'] : die('HATA: İlan bulunamadı.');
 $kisiler = isset($_GET['kisiler']) ? $_GET['kisiler'] : die('HATA: Kişiler bulunamadı.');
 
-$host = "localhost";
-$vt_adi = "emlak";
-$kullanici_adi = "root";
-$sifre = "";
-try {
-    $con = new PDO(
-        "mysql:host={$host};dbname={$vt_adi}",
-        $kullanici_adi,
-        $sifre,
-        array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
-    );
-}
-// Hata durumunda hatayı göster
-catch (PDOException $exception) {
-    echo "Bağlantı hatası: " . $exception->getMessage();
-}
+include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php'; 
+
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
