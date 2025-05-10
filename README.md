@@ -200,7 +200,6 @@ Admin paneline giriş yapabilmek için:
 </div>
 
 ## 📱 Kullanıcı Sayfası İşleyişi
-
 <div align="center">
   <table>
     <tr>
@@ -209,8 +208,11 @@ Admin paneline giriş yapabilmek için:
     </tr>
     <tr>
       <td><img src="about-images/kayit-ol.png" width="400"/></td>
-      <td><img src="about-images/image014.jpg" width="400"/>
-          <img src="about-images/image018.jpg" width="400"/>
+      <td>
+        <div style="display: flex; gap: 10px;">
+          <img src="about-images/image014.jpg" width="195"/>
+          <img src="about-images/image018.jpg" width="195"/>
+        </div>
       </td>
     </tr>
     <tr>
