@@ -208,7 +208,7 @@ Admin paneline giriş yapabilmek için:
       <td><b>İlan Verme Sayfası</b></td>
     </tr>
     <tr>
-      <td><img src="about-images/image010.jpg" width="400"/></td>
+      <td><img src="about-images/kayit-ol.png" width="400"/></td>
       <td><img src="about-images/image014.jpg" width="400"/>
           <img src="about-images/image018.jpg" width="400"/>
       </td>
