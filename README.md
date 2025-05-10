@@ -211,9 +211,9 @@ Admin paneline giriş yapabilmek için:
         <img src="about-images/kayit-ol.png" width="400"/>
       </td>
       <td>
-        <div style="display: flex; gap: 10px; justify-content: center;">
-          <img src="about-images/image014.jpg" style="width: 195px;" />
-          <img src="about-images/image018.jpg" style="width: 195px;" />
+        <div style="display: flex; justify-content: center; gap: 10px;">
+          <img src="about-images/image014.jpg" width="195" />
+          <img src="about-images/image018.jpg" width="195" />
         </div>
       </td>
     </tr>
