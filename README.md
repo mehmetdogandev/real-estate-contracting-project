@@ -154,10 +154,10 @@ proje/
 ├── k_mesaj/                      #Kullanıcı mesajlarını listeleyen, yanıtlama ve yeni mesaj oluşturma işlemlerini sağlayan dosyalar
 │
 ├── db/                           # Veritabanı dosyaları
-│   └── emlak.sql             # Veritabanı şeması
+│   └── emlak.sql                 # Veritabanı şeması
 │
-├── index.php                 # Ana sayfa
-└── README.md                 # Proje dokümantasyonu
+├── index.php                     # Ana sayfa
+└── README.md                     # Proje dokümantasyonu
 ```
 
 ## 👨‍💼 Admin Paneli Erişimi
