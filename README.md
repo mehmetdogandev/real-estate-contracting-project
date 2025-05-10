@@ -276,11 +276,40 @@ Proje aşağıdaki ana veritabanı tablolarını kullanmaktadır:
       <td>E-posta gönderilecek kişilerin listesi</td>
     </tr>
     <tr>
+      <td><code>admin_mesajlar</code></td>
+      <td>Yönetici mesajları</td>
+    </tr>
+    <tr>
+      <td><code>arsabilgi</code></td>
+      <td>Arsa bilgileri</td>
+    </tr>
+    <tr>
+      <td><code>evarsa</code></td>
+      <td>Emlak verisi varsa</td>
+    </tr>
+    <tr>
+      <td><code>evbilgi</code></td>
+      <td>Ev bilgileri</td>
+    </tr>
+    <tr>
+      <td><code>gonderilenler</code></td>
+      <td>Gönderilen veriler</td>
+    </tr>
+    <tr>
+      <td><code>il</code></td>
+      <td>İl bilgileri</td>
+    </tr>
+    <tr>
+      <td><code>ilce</code></td>
+      <td>İlçe bilgileri</td>
+    </tr>
+    <tr>
       <td><code>slider</code> / <code>logo</code></td>
       <td>Site tasarım öğeleri</td>
     </tr>
   </table>
 </div>
+
 
 ## 📨 E-posta Gönderme Sistemi
 
