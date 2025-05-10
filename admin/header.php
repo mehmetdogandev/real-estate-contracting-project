@@ -427,9 +427,9 @@ $kullanici = $kullanici_sorgu->fetch(PDO::FETCH_ASSOC);
                                 </li>
                                 <li><a href="/proje/admin/kullanici/ekle.php"><i class="fas fa-user-plus"></i> Yeni Kullanıcı Ekle</a></li>
                                 <li class="divider"></li>
-                                <li><a href="/proje/admin/onay/liste.php"><i class="fas fa-check-circle"></i> Onay Bekleyen İlanlar (<?php echo $onay_ilan_bekleyen; ?>)</a></li>
-                                <li><a href="/proje/admin/onay/projeler.php"><i class="fas fa-check-double"></i> Onay Bekleyen Projeler (<?php echo $onay_proje_bekleyen; ?>)</a></li>
-                                <li><a href="/proje/admin/onay/kullanicilar.php"><i class="fas fa-user-check"></i> Onay Bekleyen Kullanıcılar (<?php echo $onay_kullanici_bekleyen; ?>)</a></li>
+                                <li><a href="/proje/admin/ilan/onay.php"><i class="fas fa-check-circle"></i> Onay Bekleyen İlanlar (<?php echo $onay_ilan_bekleyen; ?>)</a></li>
+                                <li><a href="/proje/admin/projeler/onay.php"><i class="fas fa-check-double"></i> Onay Bekleyen Projeler (<?php echo $onay_proje_bekleyen; ?>)</a></li>
+                                <li><a href="/proje/admin/kullanici/onay.php"><i class="fas fa-user-check"></i> Onay Bekleyen Kullanıcılar (<?php echo $onay_kullanici_bekleyen; ?>)</a></li>
                             </ul>
                         </li>
 
