@@ -209,7 +209,7 @@ Admin paneline giriş yapabilmek için:
     </tr>
     <tr>
       <td><img src="about-images/kayit-ol.png" width="400"/></td>
-      <td><img src="about-images/birlestirilmis.gif" width="400"/>
+      <td><img src="about-images/birlestirilmis2.gif" width="400"/>
       </td>
     </tr>
     <tr>
@@ -217,7 +217,7 @@ Admin paneline giriş yapabilmek için:
       <td><b>İlanları Görüntüleme</b></td>
     </tr>
     <tr>
-      <td><img src="about-images/mesajlasma.gif" width="400"/></td>
+      <td><img src="about-images/mesajlasma2.gif" width="400"/></td>
       <td><img src="about-images/" width="400"/></td>
     </tr>
   </table>
