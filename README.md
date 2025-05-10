@@ -210,17 +210,16 @@ Admin paneline giriş yapabilmek için:
       <td><img src="about-images/kayit-ol.png" width="400"/></td>
       <td>
         <td> 
-          <div style="display: flex; flex-direction: column; align-items: center;">
+          <div >
         <img src="about-images/image014.jpg" style="width: 95%; max-width: 400px; margin-bottom: 10px;" />
         </div>
         </td>
         <td>
-          <div style="display: flex; flex-direction: column; align-items: center;">
+          <div >
           <img src="about-images/image018.jpg" style="width: 95%; max-width: 400px;" />
           </div>
           </td>
       </td>
-      <img src="about-images/image018.jpg" style="width: 95%; max-width: 400px;" />
     </tr>
     <tr>
       <td><b>Mesajlaşma Sistemi</b></td>
