@@ -50,11 +50,11 @@ catch (PDOException $exception) {
 	<title>Emlak & Müteahit - Proje</title>
 
 	<!-- STYLES -->
-	<link rel="stylesheet" type="text/css" href="css/fontello.css" />
-	<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
-	<link rel="stylesheet" type="text/css" href="css/plugins.css" />
-	<link rel="stylesheet" type="text/css" href="css/base.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="content/css/fontello.css" />
+	<link rel="stylesheet" type="text/css" href="content/css/skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="content/css/plugins.css" />
+	<link rel="stylesheet" type="text/css" href="content/css/base.css" />
+	<link rel="stylesheet" type="text/css" href="content/css/main-header.css" />
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<!-- Simge kütüphanesi -->
