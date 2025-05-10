@@ -16,7 +16,7 @@
 													<li>
 														<div class="list_inner">
 															<div class="image_wrap_blog">
-																<img src="img/blog/500x500.jpg" alt="" />
+																<img src="content/img/blog/500x500.jpg" alt="" />
 																<div class="overlay_image"></div>
 																<div class="overlay_color"></div>
 															</div>
@@ -41,7 +41,7 @@
 													<li>
 														<div class="list_inner">
 															<div class="image_wrap_blog">
-																<img src="img/blog/500x500.jpg" alt="" />
+																<img src="content/img/blog/500x500.jpg" alt="" />
 																<div class="overlay_image"></div>
 																<div class="overlay_color"></div>
 															</div>
@@ -66,7 +66,7 @@
 													<li>
 														<div class="list_inner">
 															<div class="image_wrap_blog">
-																<img src="img/blog/500x500.jpg" alt="" />
+																<img src="content/img/blog/500x500.jpg" alt="" />
 																<div class="overlay_image"></div>
 																<div class="overlay_color"></div>
 															</div>
@@ -91,7 +91,7 @@
 													<li>
 														<div class="list_inner">
 															<div class="image_wrap_blog">
-																<img src="img/blog/500x500.jpg" alt="" />
+																<img src="content/img/blog/500x500.jpg" alt="" />
 																<div class="overlay_image"></div>
 																<div class="overlay_color"></div>
 															</div>
@@ -116,7 +116,7 @@
 													<li>
 														<div class="list_inner">
 															<div class="image_wrap_blog">
-																<img src="img/blog/500x500.jpg" alt="" />
+																<img src="content/img/blog/500x500.jpg" alt="" />
 																<div class="overlay_image"></div>
 																<div class="overlay_color"></div>
 															</div>
@@ -141,7 +141,7 @@
 													<li>
 														<div class="list_inner">
 															<div class="image_wrap_blog">
-																<img src="img/blog/500x500.jpg" alt="" />
+																<img src="content/img/blog/500x500.jpg" alt="" />
 																<div class="overlay_image"></div>
 																<div class="overlay_color"></div>
 															</div>
@@ -166,7 +166,7 @@
 													<li>
 														<div class="list_inner">
 															<div class="image_wrap_blog">
-																<img src="img/blog/500x500.jpg" alt="" />
+																<img src="content/img/blog/500x500.jpg" alt="" />
 																<div class="overlay_image"></div>
 																<div class="overlay_color"></div>
 															</div>
@@ -191,7 +191,7 @@
 													<li>
 														<div class="list_inner">
 															<div class="image_wrap_blog">
-																<img src="img/blog/500x500.jpg" alt="" />
+																<img src="content/img/blog/500x500.jpg" alt="" />
 																<div class="overlay_image"></div>
 																<div class="overlay_color"></div>
 															</div>

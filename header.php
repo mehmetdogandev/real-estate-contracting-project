@@ -41,7 +41,7 @@ catch (PDOException $exception) {
 <head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-					
+
 	<meta name="description" content="Buildify">
 	<meta name="author" content="Marketify">
 
@@ -72,7 +72,7 @@ catch (PDOException $exception) {
 </head>
 
 <body>
-	<div class="container-fluid bg-success"style="z-index:50; position:relative !important;">
+	<div class="container-fluid bg-success" style="z-index:50; position:relative !important;">
 		<div class="container">
 			<div class="row p-2">
 				<div class="col-md-8">
@@ -145,21 +145,21 @@ catch (PDOException $exception) {
 
 				<!-- MENUBAR -->
 				<div class="buildify_tm_menubar">
-				<div class="menu_logo">
-								<a href="index.php">
-									<img src="content/images/<?php echo $logo_baglanti; ?>" alt="Logo" style="width:150px; position:relative;">
-								</a><br>
-								
-								<form class="form-inline my-2 my-lg-0" action="urunler.php" method="get" name="form_ara">
-									<input class="form-control mr-sm-2" type="search" placeholder="Arama yapın..." aria-label="Ara" name="aranan">
-									<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ara</button>
-								</form>
+					<div class="menu_logo">
+						<a href="index.php">
+							<img src="content/images/<?php echo $logo_baglanti; ?>" alt="Logo" style="width:150px; position:relative;">
+						</a><br>
 
-							</div>
+						<form class="form-inline my-2 my-lg-0" action="urunler.php" method="get" name="form_ara">
+							<input class="form-control mr-sm-2" type="search" placeholder="Arama yapın..." aria-label="Ara" name="aranan">
+							<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ara</button>
+						</form>
+
+					</div>
 					<div class="buildify_tm_menubar_in">
-						
+
 						<div class="buildify_tm_menubar_content">
-						
+
 
 							<div class="menu_nav">
 
@@ -197,7 +197,6 @@ catch (PDOException $exception) {
 				</div>
 				<!-- /MENUBAR -->
 			</div>
-			<!-- /LEFTPART -->
 
 			<!-- RIGHTPART -->
 			<div class="buildify_tm_rightpart_wrap">
@@ -217,7 +216,7 @@ catch (PDOException $exception) {
 										</div>
 									</div>
 									<div class="send_msg">
-										<a href="mesajlarım.php">
+										<a href="mesajlarim.php">
 											<img class="svg" src="img/svg/message2.svg" alt="" />
 										</a>
 									</div>
@@ -251,32 +250,7 @@ catch (PDOException $exception) {
 											</div>
 										</div>
 									</div>
-									<!-- <div class="navigation_wrap">
-										<div class="container">
-											<div class="inner_navigation">
-												<ul class="nav">
-													<li><a href="index.html">Anasayfa</a></li>
-													<li>
-														<a href="#">Çalışmalarımız</a>
-														<ul class="sub_menu">
-															<li><a href="projects.html">Projeler</a></li>
-															<li><a href="project_single.html">İlanlar</a></li>
-														</ul>
-													</li>
-													<li>
-														<a href="#">Bizden Olun</a>
-														<ul class="sub_menu">
-															<li><a href="kayit.php">Pazarlamacımız Olun</a></li>
-															<li><a href="kayit.php">Müşterimiz Olun</a></li>
-														</ul>
-													</li>
-													<li><a href="hakkimizda.php">Hakkımızda</a></li>
-													<li><a href="blog.php">Blog</a></li>
-													<li><a href="Ortaklarımız.php">Ortaklarımız</a></li>
-												</ul>
-											</div>
-										</div>
-									</div> -->
+
 								</div>
 							</div>
 							<!-- /HEADER -->
