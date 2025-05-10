@@ -291,9 +291,9 @@ Admin paneli üzerinden sisteme kayıtlı kullanıcılara toplu e-posta gönderi
   <p><small>E-posta Gönderme Sistemi</small></p>
 </div>
 
-### Kullanım Adımları
+## Kullanım Adımları
 
-# Yöntem 1: Doğrudan Mail İşlemleri Menüsünden  
+### Yöntem 1: Doğrudan Mail İşlemleri Menüsünden  
 
 1. Yönetici paneline giriş yapın.
 2. "Mail İşlemleri" menüsüne tıklayın
