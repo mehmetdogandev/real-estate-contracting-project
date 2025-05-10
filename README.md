@@ -217,8 +217,8 @@ Admin paneline giriş yapabilmek için:
       <td><b>İlanları Görüntüleme</b></td>
     </tr>
     <tr>
+      <td><img src="about-images/mesajlasma.gif" width="400"/></td>
       <td><img src="about-images/" width="400"/></td>
-      <td><img src="" width="400"/></td>
     </tr>
   </table>
 </div>
