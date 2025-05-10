@@ -207,18 +207,14 @@ Admin paneline giriş yapabilmek için:
       <td><b>İlan Verme Sayfası</b></td>
     </tr>
     <tr>
-      <td><img src="about-images/kayit-ol.png" width="400"/></td>
       <td>
-        <td> 
-          <div >
-        <img src="about-images/image014.jpg" style="width: 95%; max-width: 400px; margin-bottom: 10px;" />
+        <img src="about-images/kayit-ol.png" width="400"/>
+      </td>
+      <td>
+        <div style="display: flex; gap: 10px; justify-content: center;">
+          <img src="about-images/image014.jpg" style="width: 195px;" />
+          <img src="about-images/image018.jpg" style="width: 195px;" />
         </div>
-        </td>
-        <td>
-          <div >
-          <img src="about-images/image018.jpg" style="width: 95%; max-width: 400px;" />
-          </div>
-          </td>
       </td>
     </tr>
     <tr>
