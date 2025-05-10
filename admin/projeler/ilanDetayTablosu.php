@@ -261,7 +261,7 @@ WHERE projeler.id = ? LIMIT 0,1";
 					<a href='liste.php' class='btn btn-danger'> <span class='glyphicon glyphicon
 glyphicon-list'></span> İlan listesi</a>
 					<a href='mailgonder/liste.php?id=<?php echo $id; ?>' class='btn btn-primary'>
-						<i class='fas fa-envelope'></i> E-posta ile İlanı Paylaş
+						<i class='fas fa-envelope'></i> E-posta ile Projeyi Paylaş
 					</a>
 				</td>
 
