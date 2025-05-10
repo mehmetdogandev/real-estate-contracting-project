@@ -209,9 +209,9 @@ Admin paneline giriş yapabilmek için:
     <tr>
       <td><img src="about-images/kayit-ol.png" width="400"/></td>
       <td>
-        <div style="display: flex; gap: 10px;">
-          <img src="about-images/image014.jpg" width="195"/>
-          <img src="about-images/image018.jpg" width="195"/>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <img src="about-images/image014.jpg" style="width: 95%; max-width: 400px; margin-bottom: 10px;" />
+          <img src="about-images/image018.jpg" style="width: 95%; max-width: 400px;" />
         </div>
       </td>
     </tr>
@@ -225,6 +225,7 @@ Admin paneline giriş yapabilmek için:
     </tr>
   </table>
 </div>
+
 
 ### Üyelik İşlemleri
 
