@@ -208,11 +208,7 @@ Admin paneline giriş yapabilmek için:
       <td><b>İlan Verme Sayfası</b></td>
     </tr>
     <tr>
-      <td>
-      <video>
-  <source src="about-images/sign-up.mp4" type="video/mp4">
-      </video>
-      </td>
+      <td><img src="about-images/sign-up.gif" width="400"/></td>
       <td><img src="about-images/birlestirilmis2.gif" width="400"/>
       </td>
     </tr>
