@@ -134,22 +134,28 @@ $mail->Password = 'icnx rcgc nkfb ypee'; // Kendi şifrenizle değiştirin
 ```
 proje/
 │
-├── admin/                    # Admin paneli dosyaları
-│   ├── index.php             # Admin giriş sayfası
-│   ├── panel.php             # Admin kontrol paneli
-│   └── ...                   # Diğer admin sayfaları
+├── admin/                        # Yönetici paneli arayüz dosyaları
+│   ├── index.php                 # Admin giriş sayfası
+│   ├── panel.php                 # Admin ana paneli
+│   └── ...                       # Diğer admin işlemleri
 │
-├── css/                      # Stil dosyaları
-│   └── style.css             # Ana stil dosyası
+├── config/                       # Yapılandırma ayarları
+│   └── vtabani.php               # Veritabanı bağlantı ayarları
 │
-├── js/                       # JavaScript dosyaları
+├── content/                      # Statik içerikler ve medya dosyaları
+│   ├── css/                      # CSS dosyaları
+│   │   └── style.css             # Ana stil dosyası
+│   ├── js/                       # JavaScript dosyaları
+│   ├── images/                   # Kullanıcıya gösterilecek görseller
+│   ├── img/                      # Sistem içi kullanılan ikon, arkaplan vs.
+│   ├── fonts/                    # Font dosyaları
+│   └── ajax.php 
 │
-├── images/                   # Görsel dosyaları
+├── k_mesaj/                      #Kullanıcı mesajlarını listeleyen, yanıtlama ve yeni mesaj oluşturma işlemlerini sağlayan dosyalar
 │
-├── db/                       # Veritabanı dosyaları
+├── db/                           # Veritabanı dosyaları
 │   └── emlak.sql             # Veritabanı şeması
 │
-├── vtabani.php               # Veritabanı bağlantı ayarları
 ├── index.php                 # Ana sayfa
 └── README.md                 # Proje dokümantasyonu
 ```
