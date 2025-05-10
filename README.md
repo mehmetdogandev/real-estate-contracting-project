@@ -297,11 +297,11 @@ Proje aşağıdaki ana veritabanı tablolarını kullanmaktadır:
     </tr>
     <tr>
       <td><code>il</code></td>
-      <td>İl bilgileri</td>
+      <td>İl İsimleri Listesi</td>
     </tr>
     <tr>
       <td><code>ilce</code></td>
-      <td>İlçe bilgileri</td>
+      <td>İlçe İsimleri Listesi</td>
     </tr>
     <tr>
       <td><code>slider</code> / <code>logo</code></td>
