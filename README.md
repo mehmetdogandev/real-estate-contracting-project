@@ -293,10 +293,21 @@ Admin paneli üzerinden sisteme kayıtlı kullanıcılara toplu e-posta gönderi
 
 ### Kullanım Adımları
 
-1. Admin paneline giriş yapın
+# Yöntem 1: Doğrudan Mail İşlemleri Menüsünden  
+
+1. Yönetici paneline giriş yapın.
 2. "Mail İşlemleri" menüsüne tıklayın
 3. Alıcıları seçin ve e-posta içeriğini oluşturun
 4. "Gönder" butonuna tıklayın
+
+### Yöntem 2: İlan veya Proje Üzerinden
+
+1. Yönetici paneline giriş yapın.
+2. E-posta ile göndermek istediğiniz ilan veya projeyi bulun.
+3. İlgili içeriğin üzerindeki "Detay" butonuna tıklayın.
+4. Açılan sayfanın alt kısmında bulunan "İlanı Gönder" butonuna tıklayın.
+5. Yeni açılan sayfada alıcıları seçin.
+6. "Gönder" butonuna tıklayarak e-posta gönderimini gerçekleştirin.
 
 > ⚠️ **Not:** E-posta gönderimi için SMTP ayarlarınızı doğru yapılandırdığınızdan emin olun.
 
