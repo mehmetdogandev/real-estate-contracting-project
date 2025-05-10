@@ -200,6 +200,7 @@ Admin paneline giriş yapabilmek için:
 </div>
 
 ## 📱 Kullanıcı Sayfası İşleyişi
+
 <div align="center">
   <table>
     <tr>
@@ -207,12 +208,8 @@ Admin paneline giriş yapabilmek için:
       <td><b>İlan Verme Sayfası</b></td>
     </tr>
     <tr>
-      <td>
-        <img src="about-images/kayit-ol.png" width="400" />
-      </td>
-      <td>
-        <img src="about-images/image014.jpg" width="195" style="margin-right:10px;" />
-        <img src="about-images/image018.jpg" width="195" />
+      <td><img src="about-images/kayit-ol.png" width="400"/></td>
+      <td><img src="about-images/birlestirilmis.gif" width="400"/>
       </td>
     </tr>
     <tr>
@@ -225,7 +222,6 @@ Admin paneline giriş yapabilmek için:
     </tr>
   </table>
 </div>
-
 
 ### Üyelik İşlemleri
 
