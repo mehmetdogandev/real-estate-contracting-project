@@ -19,16 +19,17 @@ function imageToBase64($imagePath)
 $ilanId = isset($_GET['id']) ? $_GET['id'] : die('HATA: İlan bulunamadı.');
 $kisiler = isset($_GET['kisiler']) ? $_GET['kisiler'] : die('HATA: Kişiler bulunamadı.');
 
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/mail-info.php';
 
 
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'C:\laragon\www\proje\admin\ilan\mailgonder\PHPMailer-6.9.1\src\Exception.php';
-require 'C:\laragon\www\proje\admin\ilan\mailgonder\PHPMailer-6.9.1\src\PHPMailer.php';
-require 'C:\laragon\www\proje\admin\ilan\mailgonder\PHPMailer-6.9.1\src\SMTP.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/ilan/mailgonder/PHPMailer-6.9.1/src/Exception.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/ilan/mailgonder/PHPMailer-6.9.1/src/PHPMailer.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/ilan/mailgonder/PHPMailer-6.9.1/src/SMTP.php';
 
 $bugun = date('m-d'); // Yalnızca ay ve günü kontrol edeceğiz
 
@@ -55,9 +56,6 @@ foreach ($kisiler as $kisi_id) {
     // isset() bir değer olup olmadığını kontrol eden PHP fonksiyonudur
     $id = isset($ilanId) ? $ilanId : throw new Exception('HATA: Kayıt bulunamadı.');
 
-    // veritabanı bağlantı dosyasını çağır
-    include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php';
-    // aktif kayıt bilgilerini oku
     // seçme sorgusunu hazırla
     $sorgu = "SELECT urunler.urunadi, urunler.aciklama, urunler.fiyat, urunler.giris_tarihi, urunler.dzltm_tarihi,
         urunler.resim, urunler.resim_iki, urunler.resim_uc, urunler.resim_dort, urunler.evarsa_id, kategoriler.kategoriadi, evbilgi.ev_tipi, evbilgi.ev_metrekare, evbilgi.oda_sayisi,
@@ -211,14 +209,18 @@ foreach ($kisiler as $kisi_id) {
     try {
         // SMTP ayarları
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // Örnek SMTP sunucusu, kendi SMTP sunucunuzu kullanın
+        $mail->Host = $mail_host;
         $mail->SMTPAuth = true;
-        $mail->Username = 'mehmetdogan.dev@gmail.com';
-        $mail->Password = 'icnx rcgc nkfb ypee';
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;
+        $mail->Username = $mail_username;
+        $mail->Password = $mail_password;
+        if ($mail_secure === 'tls') {
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        } elseif ($mail_secure === 'ssl') {
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        }
+        $mail->Port = $mail_port;
         // Gönderici bilgileri
-        $mail->setFrom('mehmetdogan.dev@gmail.com', 'Emlak & Müteahit - Proje');
+        $mail->setFrom($mail_username, 'Emlak & Müteahit - Proje');
         $mail->addAddress($email, "$ad $soyad");
         $mail->CharSet = "UTF-8";
 

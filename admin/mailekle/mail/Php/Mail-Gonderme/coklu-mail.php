@@ -6,11 +6,13 @@ if ($_SESSION["loginkey"] == "") {
 }
 
 // Header dosyasını dahil et
- include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; 
- ?>
+include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; 
+
+// Mail ayarlarını içe aktar
+include_once $_SERVER['DOCUMENT_ROOT'] . '/proje/config/mail-info.php';
+?>
 
 <?php
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -18,23 +20,23 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
+// PHPMailer nesnesi oluştur
 $mail = new PHPMailer();
 
-
+// Veritabanından alınan SMTP ayarlarını kullan
 $mail->isSMTP();
 $mail->SMTPKeepAlive = true;
 $mail->SMTPAuth = true;
-$mail->SMTPSecure = 'tls'; //ssl
+$mail->SMTPSecure = $mail_secure;
+$mail->Port = $mail_port;
+$mail->Host = $mail_host;
+$mail->Username = $mail_username;
+$mail->Password = $mail_password;
 
-$mail->Port = 587; //25 , 465 , 587
-$mail->Host = "smtp.gmail.com";
+// Gönderici adresini ayarla
+$mail->setFrom($mail_username);
 
-$mail->Username = "mehmetdogan.dev@gmail.com";
-$mail->Password = "icnx rcgc nkfb ypee";
-
-
-$mail->setFrom("mehmetdogan.dev@gmail.com");
-
+// Gönderilecek kişilerin listesi
 $data = [
     [
         "id" => 1,
@@ -53,30 +55,34 @@ $data = [
     ]
 ];
 
-
+// Her kişi için mail gönder
 foreach ($data as $d) {
     $mail->addAddress($d["email"]);
 
+    // Mail şablonunu oku
     $body = file_get_contents('./mail-template.html');
 
+    // Şablondaki değişkenleri değiştir
     $gelen = ["username", "userID"];
     $giden = [$d["name"], $d["id"]];
-
     $body = str_replace($gelen, $giden, $body);
 
+    // Mail içeriğini ayarla
     $mail->isHTML(true);
     $mail->Subject = "Hosgeldin " . $d["name"];
     $mail->Body = $body;
 
-    if ($mail->send())
+    // Maili gönder ve sonucu kontrol et
+    if ($mail->send()) {
         echo "Mail gonderimi basarili.";
-    else
+    } else {
         echo "Malesef olmadi. HATA : " . $mail->ErrorInfo;
+    }
 
+    // Bir sonraki gönderim için adres ve ekleri temizle
     $mail->clearAddresses();
     $mail->clearAttachments();
 }
-
-
 ?>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>
+
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>

@@ -103,26 +103,32 @@ mv EMLAKCI-ILE-MUTEAHHIT-PROJESI proje
 ```bash
 mysql -u kullaniciadi -p emlak < proje/db/emlak.sql
 ```
+## Yapılandırma Ayarları
 
-4. **Yapılandırma Ayarları**
+### Veritabanı Bağlantısı
 
-- `vtabani.php` dosyasını açın ve veritabanı bağlantı ayarlarını güncelleyin:
-
-```php
-define("DBHOST", "localhost");
-define("DBUSER", "root"); // Kendi kullanıcı adınızla değiştirin
-define("DBPASS", ""); // Kendi şifrenizle değiştirin
-define("DBNAME", "emlak");
-```
-
-- E-posta gönderme işlevi için kendi e-posta adresinizi ve şifrenizi güncelleyin:
+`vtabani.php` dosyasını açarak aşağıdaki bilgileri kendi ortamınıza göre güncelleyin:
 
 ```php
-$mail->Host = 'smtp.gmail.com';
-$mail->SMTPAuth = true;
-$mail->Username = 'mehmetdogan.dev@gmail.com'; // Kendi e-posta adresinizle değiştirin
-$mail->Password = 'icnx rcgc nkfb ypee'; // Kendi şifrenizle değiştirin
+define("DBHOST", "localhost"); // Veritabanı sunucusu
+define("DBUSER", "root");      // Veritabanı kullanıcı adı
+define("DBPASS", "");          // Veritabanı şifresi
+define("DBNAME", "emlak");     // Veritabanı adı
 ```
+
+### E-posta Ayarları
+
+E-posta gönderim ayarları artık merkezi olarak veritabanında saklanmaktadır.
+
+1. Yönetici panelinde oturum açın: `http://localhost/proje/admin/profil/ayarlar.php`
+2. Sol menüden **"Ayarlar"** sekmesine gidin.
+3. Ardından **"Mail Ayarları"** sekmesini seçin.
+4. SMTP sunucu adresi, port, e-posta adresi ve şifrenizi girerek ayarları yapılandırın.
+5. **"Kaydet"** butonuna basarak değişiklikleri kaydedin.
+
+**Not:** Varsayılan olarak Gmail SMTP ayarları kullanılmaktadır. Gmail hesabı ile gönderim yapacaksanız:
+* "Daha az güvenli uygulama erişimi" özelliğini aktif edin **veya**
+* Hesabınız için özel bir **Uygulama Şifresi** oluşturun.
 
 5. **Web Sunucusuna Yükleme**
 

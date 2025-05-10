@@ -7,37 +7,33 @@ if ($_SESSION["loginkey"] == "") {
 
 // Header dosyasını dahil et
 include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';
-?>
 
+// Mail ayarlarını içe aktar
+include_once $_SERVER['DOCUMENT_ROOT'] . '/proje/config/mail-info.php';
 
-<?php
-
+// Form gönderildi mi kontrol et
 if (isset($_POST["email"])) {
-
-    $kime = "mehmetdogan.dev@gmail.com";
+    // Mail gönderilecek adres olarak veritabanından alınan mail adresini kullan
+    $kime = $mail_username;
     $konu = $_POST["subject"];
 
     $mesaj = "<h1>" . $_POST["message"] . "</h1>";
     $baslik = "From: " . $_POST["name"] . "<" . $_POST["email"] . ">\r\n";
-    $baslik .= "Reply-to :mehmetdogan.dev@gmail.com\r\n";
+    $baslik .= "Reply-to: $mail_username\r\n";
     $baslik .= "Content-type: text/html\r\n";
 
-
-    if (mail($kime, $konu, $mesaj, $baslik))
+    // Mail gönder ve sonucu kontrol et
+    if (mail($kime, $konu, $mesaj, $baslik)) {
         echo "Emailiniz basariyla gonderilmistir.";
-    else
+    } else {
         echo "Malesef emailiniz gonderilemedi.";
+    }
 }
-
-
-
 ?>
 
 <!doctype html>
 <html lang="en">
-
 <head>
-
     <title>PHP Mail Fonksiyonu</title>
     <style>
         *:focus {
@@ -91,7 +87,6 @@ if (isset($_POST["email"])) {
         }
     </style>
 </head>
-
 <body>
     <form action="" method="post">
         <h1>Iletisim</h1>
@@ -101,4 +96,6 @@ if (isset($_POST["email"])) {
         <textarea name="message"></textarea><br>
         <button>Gonder</button>
     </form>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>
+</body>
+</html>

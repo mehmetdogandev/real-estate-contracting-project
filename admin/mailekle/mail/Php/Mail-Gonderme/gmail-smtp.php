@@ -1,6 +1,7 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
-
 <?php
+// Mail ayarlarını içe aktar
+include_once $_SERVER['DOCUMENT_ROOT'] . '/proje/config/mail-info.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -9,42 +10,40 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
+// İlk örnek mail gönderimi
 $mail = new PHPMailer();
 
-
+// Veritabanından alınan SMTP ayarlarını kullan
 $mail->isSMTP();
 $mail->SMTPKeepAlive = true;
 $mail->SMTPAuth = true;
-$mail->SMTPSecure = 'tls'; //ssl
+$mail->SMTPSecure = $mail_secure;
+$mail->Port = $mail_port;
+$mail->Host = $mail_host;
+$mail->Username = $mail_username;
+$mail->Password = $mail_password;
 
-$mail->Port = 587; //25 , 465 , 587
-$mail->Host = "smtp.gmail.com";
-
-$mail->Username = "mehmetdogan.dev@gmail.com";
-$mail->Password = "icnx rcgc nkfb ypee";
-
-
-$mail->setFrom("mehmetdogan.dev@gmail.com");
+// Gönderici ve alıcı ayarla
+$mail->setFrom($mail_username);
 $mail->addAddress("MEHMET DOĞAN");
 
-
+// Mail içeriğini ayarla
 $mail->isHTML(true);
 $mail->Subject = "Gmail SMTP Ornegi";
 $mail->Body = "<h1>Merhaba Mehmet</h1><p>Bu bir denemedir.</p>";
 
+// Dosya ekle
 $mail->addAttachment("dosya.txt");
 
-if ($mail->send())
+// Maili gönder ve sonucu kontrol et
+if ($mail->send()) {
     echo "Mail gonderimi basarili.";
-else
+} else {
     echo "Malesef olmadi.";
+}
 
-
-
+// Formdan gelen verileri işle
 if ($_POST) {
-
-    require_once 'mail/class.phpmailer.php';
-
     $baslik = trim($_POST['baslik']);
     $konu = trim($_POST['konu']);
     $icerik = trim($_POST['icerik']);
@@ -52,21 +51,26 @@ if ($_POST) {
     if (!$baslik || !$konu || !$icerik) {
         echo "Lütfen boş alan bırakmayınız";
     } else {
+        // Yeni bir PHPMailer nesnesi oluştur
         $mail = new PHPMailer();
-        $mail->Host = 'smtp.gmail.com'; //kendi smtp sunucunuzu kullanın
-        $mail->Port = 587; //SSL var ise 465
-        $mail->SMTPSecure = 'tls'; //ssl varsayılan = tls
-        $mail->SMTPAuth = true; //smtp doğrulama ve aktifleştirme
-        $mail->Username = "mehmetdogan.dev@gmail.com";
-        $mail->Password = "icnx rcgc nkfb ypee";
+        
+        // Veritabanından alınan SMTP ayarlarını kullan
+        $mail->Host = $mail_host;
+        $mail->Port = $mail_port;
+        $mail->SMTPSecure = $mail_secure;
+        $mail->SMTPAuth = true;
+        $mail->Username = $mail_username;
+        $mail->Password = $mail_password;
         $mail->IsSMTP();
 
-        $mail->From = "mehmetdogan.dev@gmail.com";
+        // Mail başlık ve içerik ayarları
+        $mail->From = $mail_username;
         $mail->FromName = $baslik;
         $mail->CharSet = "utf8";
         $mail->Subject = $konu;
         $mailicerigi = $icerik;
 
+        // Aboneleri ekle
         $aboneler = $con->prepare("SELECT * FROM tb_mail_gonder");
         $aboneler->execute();
 
@@ -78,6 +82,7 @@ if ($_POST) {
 
         $mail->MsgHTML($mailicerigi);
 
+        // Maili gönder ve sonucu kontrol et
         if ($mail->send()) {
             echo "Toplu Mail Gönderildi";
         } else {
@@ -85,16 +90,11 @@ if ($_POST) {
         }
     }
 }
-
-
 ?>
-
 
 <!doctype html>
 <html lang="en">
-
 <head>
-
     <title>PHP Mail Fonksiyonu</title>
     <style>
         *:focus {
@@ -148,7 +148,6 @@ if ($_POST) {
         }
     </style>
 </head>
-
 <body>
     <form action="" method="post">
         <h1>Iletisim</h1>
@@ -158,7 +157,6 @@ if ($_POST) {
         <button type="submit">Toplu Mail Gönder</button>
     </form>
 
-
-
-
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>
+</body>
+</html>
