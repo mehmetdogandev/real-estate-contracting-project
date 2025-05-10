@@ -45,13 +45,13 @@ $data = [
     ],
     [
         "id" => 2,
-        "name" => "ahmet",
-        "email" => "dgn8402memet@gmail.com"
+        "name" => "Enes",
+        "email" => "enesbbekik@gmail.com"
     ],
     [
         "id" => 4,
         "name" => "mehmet",
-        "email" => "mehmetdogan.dev@gmail.com"
+        "email" => "test@gmail.com"
     ]
 ];
 
