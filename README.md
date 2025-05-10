@@ -218,7 +218,7 @@ Admin paneline giriş yapabilmek için:
     </tr>
     <tr>
       <td><img src="about-images/mesajlasma2.gif" width="400"/></td>
-      <td><img src="about-images/" width="400"/></td>
+      <td><img src="about-images/ilanlari-goruntuleme.gif" width="400"/></td>
     </tr>
   </table>
 </div>
