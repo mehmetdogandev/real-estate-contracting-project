@@ -1,7 +1,6 @@
 <?php
 // Veritabanı ayar dosyasını dahil et
-include '../../config/vtabani.php';
-
+include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php'; 
 try {
     // Kaydın id bilgisini al
     $id = isset($_GET['id']) ? $_GET['id'] : die('HATA: ID bilgisi bulunamadı.');

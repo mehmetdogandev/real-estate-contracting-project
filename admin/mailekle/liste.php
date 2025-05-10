@@ -1,4 +1,3 @@
-
 <div class="container">
     <div class="page-header">
         <h1>Kişi Listesi</h1>
@@ -11,7 +10,7 @@
     $ilk_kayit_no = ($sayfa_kayit_sayisi * $sayfa) - $sayfa_kayit_sayisi;
 
     // veritabanı bağlantı dosyasını çağır
-    include '../../config/vtabani.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php';
 
     // silme mesajı burada yer alacak
     $islem = isset($_GET['islem']) ? $_GET['islem'] : "";
@@ -43,11 +42,11 @@
  <span class='glyphicon glyphicon glyphicon-plus'></span> Sisteme Yeni Mail Kaydet</a>";
 
 
- echo "<a href='mail/Php/Mail-Gonderme/mail.php' class='btn btn-primary m-b-1em col-xs col-md m-r-1em pull-left'> 
+    echo "<a href='mail/Php/Mail-Gonderme/mail.php' class='btn btn-primary m-b-1em col-xs col-md m-r-1em pull-left'> 
  <span class='fas fa-envelope'></span>  Kullanıcılara Mail Gönder</a>";
 
 
-    
+
     ?>
     <!-- kişi arama formu -->
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="get">
@@ -131,7 +130,7 @@ class='glyphicon glyphicon glyphicon-remove-circle'></span> Sil</a>";
         echo "<div class='alert alert-danger'>Listelenecek kayıt bulunamadı.</div>";
     }
     ?>
-    
+
 </div> <!-- /container -->
 <!-- Kayıt silme onay kodları bu alana eklenecek -->
 <script type='text/javascript'>
@@ -198,4 +197,3 @@ class='glyphicon glyphicon glyphicon-remove-circle'></span> Sil</a>";
         });
     });
 </script>
-

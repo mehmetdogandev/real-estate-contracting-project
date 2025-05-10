@@ -1,4 +1,4 @@
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';  ?>
 
  <div class="container">
  <div class="page-header">
@@ -10,7 +10,6 @@
  $id=isset($_GET['id']) ? $_GET['id'] : die('HATA: Id bilgisi bulunamadı.');
 
  // veritabanı bağlantı dosyasını dahil et
- include '../../config/vtabani.php';
 
  // aktif kayıt bilgilerini oku
  try {
@@ -135,4 +134,4 @@ htmlspecialchars($sifre, ENT_QUOTES); ?>" class='form-control' /></td>
  
  </div> <!-- container -->
 
- <?php include "../footer.php"; ?>
+ <?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>

@@ -1,4 +1,5 @@
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; 
+ ?>
 <div class="container">
  <div class="page-header">
  <h1>Slider Yükle</h1>
@@ -7,7 +8,6 @@
  <?php
  if($_POST){
  // veritabanı yapılandırma dosyasını dahil et
- include '../../config/vtabani.php';
  try{
  // kayıt ekleme sorgusu
  $sorgu = "INSERT INTO slider SET slider_baslik=:slider_baslik, slider_aciklama=:slider_aciklama, slider_baglanti=:slider_baglanti, slider_k_durum='0'";
@@ -116,4 +116,4 @@ else{
  </table>
 </form>
 </div> <!-- container -->
-<?php include "../footer.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>

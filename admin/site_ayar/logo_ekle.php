@@ -1,4 +1,4 @@
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
 <div class="container">
  <div class="page-header">
  <h1>Logo Yükle</h1>
@@ -7,7 +7,6 @@
  <?php
  if($_POST){
  // veritabanı yapılandırma dosyasını dahil et
- include '../../config/vtabani.php';
  try{
  // kayıt ekleme sorgusu
  $sorgu = "INSERT INTO logo SET logo_aciklama=:logo_aciklama, logo_baglanti=:logo_baglanti, logo_k_durum='0'";
@@ -107,4 +106,4 @@ else{
  </table>
 </form>
 </div> <!-- container -->
-<?php include "../footer.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>

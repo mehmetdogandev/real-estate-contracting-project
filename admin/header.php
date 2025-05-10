@@ -4,7 +4,7 @@ if ($_SESSION["loginkey"] == "") {
 	// oturum açılmamışsa login.php sayfasına git
 	header("Location: /proje/admin/login.php");
 }
-
+include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php'; 
 // veritabanı bağlantı dosyasını dahil et
 /*include_once "/proje/config/vtabani.php";
 

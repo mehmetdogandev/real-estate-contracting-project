@@ -1,4 +1,4 @@
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';  ?>
 
  <div class="container">
  <div class="page-header">
@@ -11,7 +11,6 @@
  $id=isset($_GET['id']) ? $_GET['id'] : die('HATA: Kayıt bulunamadı.');
 
  // veritabanı bağlantı dosyasını çağır
- include '../../config/vtabani.php';
  // aktif kayıt bilgilerini oku
  try {
  // seçme sorgusunu hazırla
@@ -65,7 +64,7 @@ $msj_mesaj=$kayit['msj_mesaj'];
  </table>
  </div> <!-- container -->
 
- <?php include "../footer.php"; ?>
+ <?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>
  
  <!-- Kayıt silme onay kodları bu alana eklenecek -->
 <script type='text/javascript'>

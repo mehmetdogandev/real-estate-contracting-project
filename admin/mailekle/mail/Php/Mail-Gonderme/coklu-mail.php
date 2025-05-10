@@ -6,8 +6,8 @@ if ($_SESSION["loginkey"] == "") {
 }
 
 // Header dosyasını dahil et
-include_once "header.php";
-?>
+ include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; 
+ ?>
 
 <?php
 
@@ -79,4 +79,4 @@ foreach ($data as $d) {
 
 
 ?>
-<?php include_once "footer.php";?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>

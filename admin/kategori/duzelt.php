@@ -1,4 +1,4 @@
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
 
 <div class="container">
     <div class="page-header">
@@ -10,7 +10,6 @@
     $id = isset($_GET['id']) ? $_GET['id'] : die('HATA: Id bilgisi bulunamadı.');
 
     // veritabanı bağlantı dosyasını dahil et
-    include '../../config/vtabani.php';
 
     // aktif kayıt bilgilerini oku
     try {
@@ -101,4 +100,4 @@ LIMIT 0,1";
 
 </div> <!-- container -->
 
-<?php include "../footer.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>

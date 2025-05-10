@@ -1,6 +1,6 @@
 <script src="../../content/js/jquery-3.3.1.min.js" type="text/javascript"></script>
 
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';  ?>
 <div class="container">
 	<div class="page-header">
 		<h1>Yeni Ev İlanı Ekle</h1>
@@ -9,7 +9,6 @@
 	<?php
 	if ($_POST) {
 		// veritabanı yapılandırma dosyasını dahil et
-		include '../../config/vtabani.php';
 		try {
 			// kayıt ekleme sorgusu
 			$sorgu = "INSERT INTO urunler SET urunadi=:urunadi, il_id=:il_id,
@@ -69,7 +68,6 @@ resim_uc=:resim_uc, resim_dort=:resim_dort, kategori_id=:kategori_id";
 
 				//BURAYA sorgu 2 ile php pdo id alma kodu ile birlikte evbilgi tablosuna veri girişi yapacağız....
 				// veritabanı yapılandırma dosyasını dahil et
-				include '../../config/vtabani.php';
 				try {
 					// kayıt ekleme sorgusu
 					$sorgu = "INSERT INTO evbilgi SET ev_urun_id=:ev_urun_id, ev_tipi=:ev_tipi, ev_metrekare=:ev_metrekare, oda_sayisi=:oda_sayisi,
@@ -337,7 +335,6 @@ aşamaz.</div>";
 				<td>
 					<?php
 					// veritabanı yapılandırma dosyasını dahil et
-					include '../../config/vtabani.php';
 					// kayıt listeleme sorgusu
 					$sorgu = 'SELECT id, kategoriadi FROM kategoriler';
 					$stmt = $con->prepare($sorgu); // sorguyu hazırla
@@ -521,7 +518,7 @@ glyphicon-list'></span> Ürün listesi</a>
 	</form>
 
 </div> <!-- container -->
-<?php include "../footer.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>
 
 <script type="text/javascript">
 	// ilçe seçimini kısıtlamak için script kodumuz

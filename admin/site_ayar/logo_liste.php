@@ -1,4 +1,4 @@
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';  ?>
 <div class="container">
  <div class="page-header">
  <h1>Logolar</h1>
@@ -16,7 +16,6 @@
  $ilk_kayit_no = ($sayfa_kayit_sayisi * $sayfa) - $sayfa_kayit_sayisi;
  
  // veritabanı bağlantı dosyasını çağır
- include '../../config/vtabani.php';
 
  // silme mesajı burada yer alacak
  $islem = isset($_GET['islem']) ? $_GET['islem'] : "";
@@ -138,7 +137,7 @@ name="aranan" value="<?php echo isset($_GET['aranan']) ? $_GET['aranan'] : ""; ?
 ?>
  
  </div> <!-- /container -->
-<?php include "../footer.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>
 <!-- Kayıt silme onay kodları bu alana eklenecek -->
 <script type='text/javascript'>
  // kayıt silme işlemini onayla

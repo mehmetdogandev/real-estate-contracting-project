@@ -1,4 +1,4 @@
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
 
  <div class="container">
  <div class="page-header">
@@ -10,7 +10,6 @@
  $slider_id=isset($_GET['slider_id']) ? $_GET['slider_id'] : die('HATA: slider_id bilgisi bulunamadı.');
 
  // veritabanı bağlantı dosyasını dahil et
- include '../../config/vtabani.php';
 
  // aktif kayıt bilgilerini oku
  try {
@@ -162,4 +161,4 @@ else{
  
  </div> <!-- container -->
 
- <?php include "../footer.php"; ?>
+ <?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>

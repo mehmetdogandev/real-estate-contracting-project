@@ -1,4 +1,4 @@
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';  ?>
 <div class="container">
     <div class="page-header">
         <h1>İlan Listesi</h1>
@@ -6,7 +6,7 @@
     <!-- Kayıtları listeleyecek PHP kodları bu alana eklenecek -->
     <?php
     // veritabanı bağlantı dosyasını çağır
-    include '../../config/vtabani.php';
+   
 
     // gelen kategori parametresini oku
     $id = isset($_GET['id']) ? $_GET['id'] : "";
@@ -65,4 +65,4 @@ class='glyphicon glyphicon glyphicon glyphicon-list'></span> Kategori listesi</a
 
 
 </div> <!-- /container -->
-<?php include "../footer.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>

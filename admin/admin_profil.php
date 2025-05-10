@@ -1,4 +1,4 @@
-<?php include "header.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
 
 <div class="container">
     <div class="page-header">
@@ -10,8 +10,6 @@
     $kadi = isset($_GET['kadi']) ? $_GET['kadi'] : die('HATA: kadi bilgisi bulunamadı.');
 
     // veritabanı bağlantı dosyasını dahil et
-    include '../config/vtabani.php';
-
     // aktif kayıt bilgilerini oku
     try {
         // seçme sorgusunu hazırla
@@ -132,4 +130,4 @@ sifre=:sifre, eposta=:eposta, tel_no=:tel_no, onay=:onay WHERE id=:id";
 
 </div> <!-- container -->
 
-<?php include "footer.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>

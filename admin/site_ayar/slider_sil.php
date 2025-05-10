@@ -8,7 +8,7 @@ if ($_SESSION["loginkey"] == "") {
 
 <?php
 // veritabanı ayar dosyasını dahil et
-include '../../config/vtabani.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php'; 
 try {
   // kaydın slider_id bilgisini al
   $slider_id = isset($_GET['slider_id']) ? $_GET['slider_id'] : die('HATA: slider_id bilgisi bulunamadı.');

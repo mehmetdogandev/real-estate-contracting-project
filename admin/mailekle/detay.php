@@ -1,4 +1,4 @@
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
 <div class="container">
     <div class="page-header">
         <h1>Kişi Bilgisi</h1>
@@ -8,7 +8,6 @@
     $id = isset($_GET['id']) ? $_GET['id'] : die('HATA: Kayıt bulunamadı.');
 
     // Veritabanı bağlantı dosyasını çağır
-    include '../../config/vtabani.php';
 
     try {
         // Seçme sorgusunu hazırla
@@ -68,4 +67,4 @@
         </tr>
     </table>
 </div> <!-- container -->
-<?php include "../footer.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>

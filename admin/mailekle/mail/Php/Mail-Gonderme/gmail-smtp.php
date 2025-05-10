@@ -1,4 +1,4 @@
-<?php include "header.php"?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
 
 <?php
 
@@ -176,4 +176,4 @@ if ($_POST) {
 
 
 
-<?php include "footer.php"?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>

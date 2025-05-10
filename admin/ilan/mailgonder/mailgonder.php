@@ -69,7 +69,7 @@ foreach ($kisiler as $kisi_id) {
     $id = isset($ilanId) ? $ilanId : throw new Exception('HATA: Kayıt bulunamadı.');
 
     // veritabanı bağlantı dosyasını çağır
-    include '../../../config/vtabani.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php';
     // aktif kayıt bilgilerini oku
     // seçme sorgusunu hazırla
     $sorgu = "SELECT urunler.urunadi, urunler.aciklama, urunler.fiyat, urunler.giris_tarihi, urunler.dzltm_tarihi,

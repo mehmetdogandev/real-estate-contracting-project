@@ -1,4 +1,4 @@
-<?php include "../../header.php";
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; 
 
 $ilanId = isset($_GET['id']) ? $_GET['id'] : die('HATA: Kayıt bulunamadı.');
 
@@ -15,7 +15,6 @@ $ilanId = isset($_GET['id']) ? $_GET['id'] : die('HATA: Kayıt bulunamadı.');
     $ilk_kayit_no = ($sayfa_kayit_sayisi * $sayfa) - $sayfa_kayit_sayisi;
 
     // veritabanı bağlantı dosyasını çağır
-    include '../../../config/vtabani.php';
 
     // silme mesajı burada yer alacak
     $islem = isset($_GET['islem']) ? $_GET['islem'] : "";
@@ -140,7 +139,7 @@ class='glyphicon glyphicon glyphicon-remove-circle'></span> Sil</a>";
     </form>
     </td>
 </div> <!-- /container -->
-<?php include "../../footer.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>
 <!-- Kayıt silme onay kodları bu alana eklenecek -->
 <script type='text/javascript'>
     // kayıt silme işlemini onayla

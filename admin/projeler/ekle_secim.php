@@ -1,4 +1,4 @@
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';  ?>
 <div class="container">
  <div class="page-header">
  <h1>Yeni Proje Ekle</h1>
@@ -10,4 +10,4 @@
 	<br/>
 	
  </div> <!-- /container -->
-<?php include "../footer.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>

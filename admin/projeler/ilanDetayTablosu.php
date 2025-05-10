@@ -9,7 +9,7 @@
 	$id = isset($ilanId) ? $ilanId : die('HATA: Kayıt bulunamadı.');
 
 	// veritabanı bağlantı dosyasını çağır
-	include 'C:\laragon\www\proje\config\vtabani.php';
+	include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php';
 	// aktif kayıt bilgilerini oku
 	try {
 		// seçme sorgusunu hazırla

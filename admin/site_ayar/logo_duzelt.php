@@ -1,4 +1,4 @@
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';  ?>
 
  <div class="container">
  <div class="page-header">
@@ -10,7 +10,6 @@
  $logo_id=isset($_GET['logo_id']) ? $_GET['logo_id'] : die('HATA: logo_id bilgisi bulunamadı.');
 
  // veritabanı bağlantı dosyasını dahil et
- include '../../config/vtabani.php';
 
  // aktif kayıt bilgilerini oku
  try {
@@ -156,4 +155,4 @@ htmlspecialchars($logo_aciklama, ENT_QUOTES); ?>" class='form-control' /></td>
  
  </div> <!-- container -->
 
- <?php include "../footer.php"; ?>
+ <?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>

@@ -1,8 +1,6 @@
 <?php
-include "header.php";
-
+ include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; 
 // Veritabanını çağırıyoruz
-include '../config/vtabani.php';
 
 // Sadece üyeleri sayan sorgu - kullanici onay = 2 olanları sayıyorum
 $uyeKullaniciSay = $con->query('SELECT count(*) FROM kullanicilar WHERE onay="2"')->fetchColumn();
@@ -107,4 +105,4 @@ $admin_mesaj_Say = $con->query('SELECT count(*) FROM admin_mesajlar')->fetchColu
     </div>
 </div> <!-- /container -->
 
-<?php include "footer.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>

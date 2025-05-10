@@ -1,6 +1,6 @@
 <script src="../../content/js/jquery-3.3.1.min.js" type="text/javascript"></script>
 
-<?php include "../header.php"; ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';  ?>
 <div class="container">
  <div class="page-header">
  <h1>Yeni Arsa İlanı Ekle</h1>
@@ -9,7 +9,6 @@
  <?php
 if($_POST){
  // veritabanı yapılandırma dosyasını dahil et
- include '../../config/vtabani.php';
  try{
  // kayıt ekleme sorgusu
 $sorgu = "INSERT INTO urunler SET urunadi=:urunadi, il_id=:il_id,
@@ -68,7 +67,6 @@ $stmt->bindParam(':giris_tarihi', $giris_tarihi);
 	
 	//BURAYA sorgu 2 ile php pdo id alma kodu ile birlikte arsabilgi tablosuna veri girişi yapacağız....
 	// veritabanı yapılandırma dosyasını dahil et
-	include '../../config/vtabani.php';
 	try{
 	// kayıt ekleme sorgusu
 	$sorgu = "INSERT INTO arsabilgi SET arsa_urun_id=:arsa_urun_id, imar_durumu=:imar_durumu, arsa_metrekare=:arsa_metrekare,
@@ -335,7 +333,6 @@ else{
  <td>
  <?php
  // veritabanı yapılandırma dosyasını dahil et
- include '../../config/vtabani.php';
  // kayıt listeleme sorgusu
  $sorgu='SELECT id, kategoriadi FROM kategoriler';
  $stmt = $con->prepare($sorgu); // sorguyu hazırla
@@ -486,7 +483,7 @@ glyphicon-list'></span> Ürün listesi</a>
 </form>
  
 </div> <!-- container -->
-<?php include "../footer.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>
 
 <script type="text/javascript">
 // ilçe seçimini kısıtlamak için script kodumuz
