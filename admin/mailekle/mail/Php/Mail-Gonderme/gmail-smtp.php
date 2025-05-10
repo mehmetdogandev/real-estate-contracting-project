@@ -20,11 +20,11 @@ $mail->SMTPSecure = 'tls'; //ssl
 $mail->Port = 587; //25 , 465 , 587
 $mail->Host = "smtp.gmail.com";
 
-$mail->Username = "your_mail_adres@gmail.com";
+$mail->Username = "mehmetdogan.dev@gmail.com";
 $mail->Password = "icnx rcgc nkfb ypee";
 
 
-$mail->setFrom("your_mail_adres@gmail.com");
+$mail->setFrom("mehmetdogan.dev@gmail.com");
 $mail->addAddress("MEHMET DOĞAN");
 
 
@@ -43,7 +43,7 @@ else
     $host = "localhost";
 $vt_adi = "emlak";
 $kullanici_adi = "root";
-$sifre = "Sadakat0236*";
+$sifre = "*";
 try {
     $con = new PDO(
         "mysql:host={$host};dbname={$vt_adi}",
@@ -72,11 +72,11 @@ if ($_POST) {
         $mail->Port = 587; //SSL var ise 465
         $mail->SMTPSecure = 'tls'; //ssl varsayılan = tls
         $mail->SMTPAuth = true; //smtp doğrulama ve aktifleştirme
-        $mail->Username = "your_mail_adres@gmail.com";
+        $mail->Username = "mehmetdogan.dev@gmail.com";
         $mail->Password = "icnx rcgc nkfb ypee";
         $mail->IsSMTP();
 
-        $mail->From = "your_mail_adres@gmail.com";
+        $mail->From = "mehmetdogan.dev@gmail.com";
         $mail->FromName = $baslik;
         $mail->CharSet = "utf8";
         $mail->Subject = $konu;

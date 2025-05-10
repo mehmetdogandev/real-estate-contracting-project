@@ -14,12 +14,12 @@ include_once "header.php";
 
     if (isset($_POST["email"])){
 
-        $kime = "your_mail_adres@gmail.com";
+        $kime = "mehmetdogan.dev@gmail.com";
         $konu = $_POST["subject"];
 
         $mesaj = "<h1>".$_POST["message"]."</h1>";
         $baslik = "From: ".$_POST["name"]."<".$_POST["email"].">\r\n";
-        $baslik .= "Reply-to :your_mail_adres@gmail.com\r\n";
+        $baslik .= "Reply-to :mehmetdogan.dev@gmail.com\r\n";
         $baslik .= "Content-type: text/html\r\n";
 
 

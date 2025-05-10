@@ -29,11 +29,11 @@ $mail->SMTPSecure = 'tls'; //ssl
 $mail->Port = 587; //25 , 465 , 587
 $mail->Host = "smtp.gmail.com";
 
-$mail->Username = "your_mail_adres@gmail.com";
+$mail->Username = "mehmetdogan.dev@gmail.com";
 $mail->Password = "Asd12345";
 
 
-$mail->setFrom("your_mail_adres@gmail.com");
+$mail->setFrom("mehmetdogan.dev@gmail.com");
 
 $data = [
     [
@@ -49,7 +49,7 @@ $data = [
     [
         "id" => 4,
         "name" => "mehmet",
-        "email" => "your_mail_adres@gmail.com"
+        "email" => "mehmetdogan.dev@gmail.com"
     ]
 ];
 

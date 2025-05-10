@@ -120,7 +120,7 @@ define("DBNAME", "emlak");
 ```php
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
-$mail->Username = 'your_mail_adres@gmail.com'; // Kendi e-posta adresinizle değiştirin
+$mail->Username = 'mehmetdogan.dev@gmail.com'; // Kendi e-posta adresinizle değiştirin
 $mail->Password = 'mail_sifreniz'; // Kendi şifrenizle değiştirin
 ```
 
@@ -316,7 +316,7 @@ Proje aşağıdaki ana veritabanı tablolarını kullanmaktadır:
 Admin paneli üzerinden sisteme kayıtlı kullanıcılara toplu e-posta gönderilebilir. Bu özellik, duyurular, kampanyalar ve bilgilendirmeler için idealdir.
 
 <div align="center">
-  <img src="" alt="E-posta Sistemi" width="600">
+  <img src="about-images/mail.gif" alt="E-posta Sistemi" width="600">
   <p><small>E-posta Gönderme Sistemi</small></p>
 </div>
 
