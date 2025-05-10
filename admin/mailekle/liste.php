@@ -1,3 +1,5 @@
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';  ?>
+
 <div class="container">
     <div class="page-header">
         <h1>Kişi Listesi</h1>
@@ -10,7 +12,6 @@
     $ilk_kayit_no = ($sayfa_kayit_sayisi * $sayfa) - $sayfa_kayit_sayisi;
 
     // veritabanı bağlantı dosyasını çağır
-    include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php';
 
     // silme mesajı burada yer alacak
     $islem = isset($_GET['islem']) ? $_GET['islem'] : "";
@@ -197,3 +198,4 @@ class='glyphicon glyphicon glyphicon-remove-circle'></span> Sil</a>";
         });
     });
 </script>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>

@@ -1,9 +1,5 @@
 <?php
-session_start();
-if ($_SESSION["loginkey"] == "") {
-    // oturum açılmamışsa login.php sayfasına git
-    header("Location: /proje/admin/login.php");
-}
+
 
 // Header dosyasını dahil et
 include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';

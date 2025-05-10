@@ -371,6 +371,18 @@ $kullanici = $kullanici_sorgu->fetch(PDO::FETCH_ASSOC);
                                 <li><a href="/proje/admin/kullanici/ekle.php"><i class="fas fa-plus-square"></i> Yeni Kullanıcı Ekle</a></li>
 
                             </ul>
+                        </li> <li class="dropdown <?php echo (strpos($aktif_link, '/admin/ilan/liste') !== false ? 'active' : ''); ?>">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-ad"></i> E-Posta İşlemleri <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/proje/admin/mailekle/liste.php"><i class="fas fa-list"></i> Kayıtlı Mailler</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/proje/admin/mailekle/ekle_mail.php"><i class="fas fa-plus-square"></i> Sisteme Yeni Mail Ekle</a></li>
+
+                                <li><a href="/proje/admin/mailekle/istatistik.php"><i class="fas fa-plus-square"></i> Gönderilen Mail İstatistikleri</a></li>
+
+                            </ul>
                         </li>
                     </ul>
 
