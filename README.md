@@ -208,13 +208,11 @@ Admin paneline giriş yapabilmek için:
     </tr>
     <tr>
       <td>
-        <img src="about-images/kayit-ol.png" width="400"/>
+        <img src="about-images/kayit-ol.png" width="400" />
       </td>
       <td>
-        <div style="display: flex; justify-content: center; gap: 10px;">
-          <img src="about-images/image014.jpg" width="195" />
-          <img src="about-images/image018.jpg" width="195" />
-        </div>
+        <img src="about-images/image014.jpg" width="195" style="margin-right:10px;" />
+        <img src="about-images/image018.jpg" width="195" />
       </td>
     </tr>
     <tr>
