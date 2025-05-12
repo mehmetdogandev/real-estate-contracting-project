@@ -166,7 +166,7 @@ catch (PDOException $exception) {
 								<div class="menu_nav_in">
 									<div class="menu_nav_content scrollable">
 										<ul class="vert_nav">
-											<li><a href="index.php">Anasayfa <!--<span class="sronly">(current)</span>--></a></li>
+											<li><a href="index.php">Anasayfa </a></li>
 											<li class="active1">
 												<a href="#">Çalışmalarımız</a>
 												<div class="inside_menu">
@@ -253,4 +253,5 @@ catch (PDOException $exception) {
 
 								</div>
 							</div>
+							
 							<!-- /HEADER -->

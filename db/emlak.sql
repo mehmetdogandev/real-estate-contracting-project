@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 09, 2025 at 09:03 AM
+-- Generation Time: May 12, 2025 at 04:58 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -58,6 +58,13 @@ CREATE TABLE `arsabilgi` (
   `arsa_takas` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_turkish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_turkish_ci;
 
+--
+-- Dumping data for table `arsabilgi`
+--
+
+INSERT INTO `arsabilgi` (`id`, `arsa_urun_id`, `imar_durumu`, `arsa_metrekare`, `metrekare_fiyat`, `ada_no`, `parsel_no`, `pafta_no`, `emsal`, `tapu_durumu`, `kat_karsiligi`, `arsa_krediye_uygun`, `arsa_kimden`, `arsa_takas`) VALUES
+(17, 109, '', '245', '254151', '32', '3232', '43', '23', '', 'Hayır', 'Hayır', '39', 'Evet');
+
 -- --------------------------------------------------------
 
 --
@@ -103,6 +110,41 @@ CREATE TABLE `evbilgi` (
   `ev_takas` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_turkish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_turkish_ci;
 
+--
+-- Dumping data for table `evbilgi`
+--
+
+INSERT INTO `evbilgi` (`id`, `ev_urun_id`, `ev_tipi`, `ev_metrekare`, `oda_sayisi`, `bina_yasi`, `kat_sayisi`, `isitma`, `banyo_sayisi`, `esyali`, `kullanim_durumu`, `site_icinde`, `aidat`, `ev_krediye_uygun`, `ev_kimden`, `ev_takas`) VALUES
+(36, 107, 'DubleX', '24', '5', '2', '2', 'Doğal Gaz', '1', 'Hayır', 'Evet', 'Evet', '25', 'Hayır', '40', 'Hayır'),
+(37, 108, 'Apartman Dairesi', '24', '11', '5', '22', 'Kömürlü Kalorifer', '8', 'Hayır', 'Hayır', 'Evet', '115', 'Evet', '39', 'Evet'),
+(38, 110, 'Villa', '546', '251515', '5151', '15', 'Soba', '51', 'Evet', 'Evet', 'Evet', '34', 'Evet', '39', 'Evet'),
+(39, 126, 'DubleX', '565', '56', '56', '56', 'Soba', '56', 'Evet', 'Evet', 'Evet', '565', 'Evet', '39', 'Evet'),
+(40, 111, 'DubleX', '343', '433', '34', '34', 'Doğal Gaz', '43', 'Evet', 'Evet', 'Evet', '34', 'Evet', '39', 'Evet'),
+(41, 112, 'Villa', '23', '23', '23', '34', 'Soba', '34', 'Evet', 'Evet', 'Evet', '34', 'Evet', '39', 'Evet');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gonderen_mail`
+--
+
+CREATE TABLE `gonderen_mail` (
+  `id` int NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `smtp_host` varchar(255) NOT NULL DEFAULT 'smtp.gmail.com',
+  `smtp_port` int NOT NULL DEFAULT '587',
+  `smtp_secure` varchar(10) NOT NULL DEFAULT 'tls',
+  `aktif` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `gonderen_mail`
+--
+
+INSERT INTO `gonderen_mail` (`id`, `email`, `password`, `smtp_host`, `smtp_port`, `smtp_secure`, `aktif`) VALUES
+(1, 'mehmetdogan.dev@gmail.com', 'icnx rcgc nkfb ypee', 'smtp.gmail.com', 587, 'tls', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -114,6 +156,31 @@ CREATE TABLE `gonderilenler` (
   `kisi_id` int DEFAULT NULL,
   `gonderme_tarihi` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `gonderilenler`
+--
+
+INSERT INTO `gonderilenler` (`id`, `kisi_id`, `gonderme_tarihi`) VALUES
+(469, 28, '2025-05-10 07:17:46'),
+(470, 28, '2025-05-10 07:19:10'),
+(471, 28, '2025-05-10 07:50:00'),
+(472, 28, '2025-05-10 10:19:26'),
+(473, 28, '2025-05-10 10:34:43'),
+(474, 28, '2025-05-10 10:47:12'),
+(475, 28, '2025-05-10 11:23:49'),
+(476, 28, '2025-05-10 11:27:20'),
+(477, 28, '2025-05-10 11:30:11'),
+(478, 28, '2025-05-10 11:32:33'),
+(479, 28, '2025-05-10 11:35:43'),
+(480, 28, '2025-05-10 11:36:33'),
+(481, 28, '2025-05-10 18:02:19'),
+(482, 28, '2025-05-10 18:23:21'),
+(483, 28, '2025-05-10 18:33:14'),
+(484, 28, '2025-05-10 18:56:02'),
+(485, 28, '2025-05-10 18:57:56'),
+(486, 29, '2025-05-11 07:28:06'),
+(487, 28, '2025-05-11 07:28:11');
 
 -- --------------------------------------------------------
 
@@ -1238,6 +1305,14 @@ CREATE TABLE `kisiler` (
   `son_gonderilen_email_tarih` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Dumping data for table `kisiler`
+--
+
+INSERT INTO `kisiler` (`id`, `ad`, `soyad`, `email`, `son_gonderilen_email_tarih`) VALUES
+(28, 'Mehmet', 'DOĞAN', 'mehmetdogan.dev@gmail.com', '2025-05-10 07:16:11'),
+(29, 'Yusuf', ' Bozkurt', 'ysfbzkrt2015@gmail.com', '2025-05-11 07:27:49');
+
 -- --------------------------------------------------------
 
 --
@@ -1251,6 +1326,7 @@ CREATE TABLE `kullanicilar` (
   `sifre` varchar(20) NOT NULL,
   `eposta` varchar(70) NOT NULL,
   `tel_no` varchar(10) NOT NULL,
+  `profil_resmi` varchar(255) DEFAULT NULL,
   `onay` varchar(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
@@ -1258,8 +1334,8 @@ CREATE TABLE `kullanicilar` (
 -- Dumping data for table `kullanicilar`
 --
 
-INSERT INTO `kullanicilar` (`id`, `adsoyad`, `kadi`, `sifre`, `eposta`, `tel_no`, `onay`) VALUES
-(39, 'test', 'test', 'test', 'test@gmail.com', '0512375511', '1');
+INSERT INTO `kullanicilar` (`id`, `adsoyad`, `kadi`, `sifre`, `eposta`, `tel_no`, `profil_resmi`, `onay`) VALUES
+(39, '', 'test', 'test', '', '', '/proje/content/images/profil/681f4197811fa.png', '1');
 
 -- --------------------------------------------------------
 
@@ -1296,10 +1372,10 @@ CREATE TABLE `logo` (
 INSERT INTO `logo` (`logo_id`, `logo_aciklama`, `logo_baglanti`, `logo_k_durum`) VALUES
 (4, 'Yas ilan edildiğinde kullandığımız Logo', '60880a66c5563-yas-logo.png', 0),
 (7, 'Asıl kullandığımız Logo', '606f154e20524-logo.png', 0),
-(8, 'Kutlama logosu', '60880a12190be-logo.png', 0),
+(8, 'Kutlama logosu', '60880a12190be-logo.png', 1),
 (9, 'proje logo', '6639ca8cdcbd0-logo.png', 0),
 (10, 'WALLS', '664d0d30dc411-logo-stiky.png', 0),
-(11, 'WALLS2', '664d0d3bae07b-logo-light.png', 1);
+(11, 'WALLS2', '664d0d3bae07b-logo-light.png', 0);
 
 -- --------------------------------------------------------
 
@@ -1325,6 +1401,13 @@ CREATE TABLE `projeler` (
   `onay` varchar(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
+--
+-- Dumping data for table `projeler`
+--
+
+INSERT INTO `projeler` (`id`, `urunadi`, `il_id`, `ilce_id`, `evarsa_id`, `aciklama`, `fiyat`, `giris_tarihi`, `dzltm_tarihi`, `resim`, `resim_iki`, `resim_uc`, `resim_dort`, `kategori_id`, `onay`) VALUES
+(126, 'dfgdhg', 15, 400, 3, 'fdhgjfh', 4545, '2025-05-10 10:25:52', '2025-05-10 10:25:57', '681f29b0eee07-detay-html.png', '681f29b0eee0d-index-dental-save.png', '', '', 7, '1');
+
 -- --------------------------------------------------------
 
 --
@@ -1336,6 +1419,13 @@ CREATE TABLE `projeler_kategoriler` (
   `kategoriadi` varchar(128) NOT NULL,
   `aciklama` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+--
+-- Dumping data for table `projeler_kategoriler`
+--
+
+INSERT INTO `projeler_kategoriler` (`id`, `kategoriadi`, `aciklama`) VALUES
+(7, 'Kategori-1', '');
 
 -- --------------------------------------------------------
 
@@ -1385,6 +1475,18 @@ CREATE TABLE `urunler` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
+-- Dumping data for table `urunler`
+--
+
+INSERT INTO `urunler` (`id`, `urunadi`, `il_id`, `ilce_id`, `evarsa_id`, `aciklama`, `fiyat`, `giris_tarihi`, `dzltm_tarihi`, `resim`, `resim_iki`, `resim_uc`, `resim_dort`, `kategori_id`, `onay`) VALUES
+(107, 'sadfgshasadfadsgadsgf', 16, 712, 1, 'dsgsafd', 54545, '2025-05-10 07:14:11', '2025-05-10 09:15:04', '681efcc3d96b5-demo-video-cover.png', '681efcc3d96ba-detay-html.png', '', '', 12, '1'),
+(108, 'New İlan', 16, 576, 1, 'saşdkfajg', 1545, '2025-05-10 07:18:49', '2025-05-10 09:55:30', '681efdd9375ae-index-gecmis-islem-kayitlari.png', '681efdd9375b1-responcive.png', '', '681efdd9375b3-banner.png', 13, '1'),
+(109, 'Yeni arsa ilanı', 16, 712, 2, 'dsfghdgjf', 52, '2025-05-10 09:55:22', '2025-05-10 09:55:29', '681f228ab5c6f-dental-select.png', '681f228ab5c77-index-dental-save.png', '', '', 12, '1'),
+(110, 'Yeni ev', 11, 494, 1, 'dfşgkh', 2845, '2025-05-10 09:57:01', '2025-05-10 09:57:06', '681f22ed84d34-detay-html.png', '681f22ed84d3e-index-dental-save.png', '681f22ed84d40-responcive.png', '', 11, '1'),
+(111, 'safdgfhj', 17, 159, 1, 'aresdtfghfj', 2345, '2025-05-10 12:35:00', '2025-05-10 13:47:38', '681f47f44b077-banner.png', '681f47f44b07d-responcive.png', '681f47f44b080-detay-kalan.png', '681f47f44b082-demo-video-cover.png', 12, '1'),
+(112, 'safdgsfhdgjf', 15, 190, 1, 'adsfhdgjfkghjl', 2324234344, '2025-05-10 13:45:16', '2025-05-10 13:47:38', '681f586ce5ae6-60805449c7f98-rvz3__Small_.jpg', '681f586ce5af1-664cfc4c0ffdf-indir (7).jpeg', '681f586ce5af2-681f22ed84d34-detay-html.png', '681f586ce5af4-664cfc4c0ffe5-indir (3).jpeg', 12, '1');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -1413,6 +1515,12 @@ ALTER TABLE `evarsa`
 ALTER TABLE `evbilgi`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_urun_id` (`ev_urun_id`);
+
+--
+-- Indexes for table `gonderen_mail`
+--
+ALTER TABLE `gonderen_mail`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `gonderilenler`
@@ -1512,7 +1620,7 @@ ALTER TABLE `admin_mesajlar`
 -- AUTO_INCREMENT for table `arsabilgi`
 --
 ALTER TABLE `arsabilgi`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `evarsa`
@@ -1524,13 +1632,19 @@ ALTER TABLE `evarsa`
 -- AUTO_INCREMENT for table `evbilgi`
 --
 ALTER TABLE `evbilgi`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
+--
+-- AUTO_INCREMENT for table `gonderen_mail`
+--
+ALTER TABLE `gonderen_mail`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `gonderilenler`
 --
 ALTER TABLE `gonderilenler`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=469;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=488;
 
 --
 -- AUTO_INCREMENT for table `kategoriler`
@@ -1542,13 +1656,13 @@ ALTER TABLE `kategoriler`
 -- AUTO_INCREMENT for table `kisiler`
 --
 ALTER TABLE `kisiler`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `kullanicilar`
 --
 ALTER TABLE `kullanicilar`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `kullanicilar_mesaj`
@@ -1566,13 +1680,13 @@ ALTER TABLE `logo`
 -- AUTO_INCREMENT for table `projeler`
 --
 ALTER TABLE `projeler`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
 
 --
 -- AUTO_INCREMENT for table `projeler_kategoriler`
 --
 ALTER TABLE `projeler_kategoriler`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `slider`
@@ -1584,7 +1698,7 @@ ALTER TABLE `slider`
 -- AUTO_INCREMENT for table `urunler`
 --
 ALTER TABLE `urunler`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 
 --
 -- Constraints for dumped tables
