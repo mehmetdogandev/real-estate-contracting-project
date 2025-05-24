@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 12, 2025 at 04:58 AM
+-- Generation Time: May 24, 2025 at 09:56 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -180,7 +180,10 @@ INSERT INTO `gonderilenler` (`id`, `kisi_id`, `gonderme_tarihi`) VALUES
 (484, 28, '2025-05-10 18:56:02'),
 (485, 28, '2025-05-10 18:57:56'),
 (486, 29, '2025-05-11 07:28:06'),
-(487, 28, '2025-05-11 07:28:11');
+(487, 28, '2025-05-11 07:28:11'),
+(488, 30, '2025-05-17 08:56:29'),
+(489, 29, '2025-05-17 08:56:32'),
+(490, 28, '2025-05-17 08:56:36');
 
 -- --------------------------------------------------------
 
@@ -1311,7 +1314,8 @@ CREATE TABLE `kisiler` (
 
 INSERT INTO `kisiler` (`id`, `ad`, `soyad`, `email`, `son_gonderilen_email_tarih`) VALUES
 (28, 'Mehmet', 'DOĞAN', 'mehmetdogan.dev@gmail.com', '2025-05-10 07:16:11'),
-(29, 'Yusuf', ' Bozkurt', 'ysfbzkrt2015@gmail.com', '2025-05-11 07:27:49');
+(29, 'Yusuf', ' Bozkurt', 'ysfbzkrt2015@gmail.com', '2025-05-11 07:27:49'),
+(30, 'Anadolu Mikronize', 'Proje', 'proje1@anadolumikronize.com.tr', '2025-05-17 08:56:11');
 
 -- --------------------------------------------------------
 
@@ -1644,7 +1648,7 @@ ALTER TABLE `gonderen_mail`
 -- AUTO_INCREMENT for table `gonderilenler`
 --
 ALTER TABLE `gonderilenler`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=488;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=491;
 
 --
 -- AUTO_INCREMENT for table `kategoriler`
@@ -1656,7 +1660,7 @@ ALTER TABLE `kategoriler`
 -- AUTO_INCREMENT for table `kisiler`
 --
 ALTER TABLE `kisiler`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `kullanicilar`

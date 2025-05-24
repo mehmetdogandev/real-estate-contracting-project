@@ -1,7 +1,7 @@
 # 🏢 Emlak & Müteahhit Projesi
 
 <div align="center">
-  <img src="about-images/banner.png" alt="Emlak Projesi Banner" width="800">
+  <img src="about-images/mehmet_dogan_svg-1.svg" alt="Emlak Projesi Banner" width="800">
   
   <p align="center">
     <b>Modern, İnteraktif ve Kullanıcı Dostu Emlak & Müteahhit Platformu</b>
