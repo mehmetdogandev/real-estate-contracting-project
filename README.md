@@ -84,13 +84,13 @@ Bu proje, emlak ve müteahhitlik sektörüne yönelik modern bir web platformu s
 1. **Repository'i Klonlayın**
 
 ```bash
-git clone https://github.com/mehmetdogandev/EMLAKCI-ILE-MUTEAHHIT-PROJESI.git
+git clone https://github.com/mehmetdogandev/real-estate-contracting-project.git
 ```
 
 2. **Klasör Adını Değiştirin**
 
 ```bash
-mv EMLAKCI-ILE-MUTEAHHIT-PROJESI proje
+mv real-estate-contracting-project proje
 ```
 
 > ⚠️ **ÖNEMLİ:** Projenin düzgün çalışması için klasör adının kesinlikle "proje" olması gerekmektedir, çünkü tüm kod yapısı buna göre tasarlanmıştır.
@@ -405,13 +405,13 @@ Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
 
 <div align="center">
   <p>Developed with ❤️ by <a href="https://github.com/mehmetdogandev">Mehmet DOĞAN</a></p>
-  <a href="https://github.com/mehmetdogandev/EMLAKCI-ILE-MUTEAHHIT-PROJESI/stargazers">
-    <img src="https://img.shields.io/github/stars/mehmetdogandev/EMLAKCI-ILE-MUTEAHHIT-PROJESI?style=flat-square" alt="Stars"/>
+  <a href="https://github.com/mehmetdogandev/real-estate-contracting-project/stargazers">
+    <img src="https://img.shields.io/github/stars/mehmetdogandev/real-estate-contracting-project?style=flat-square" alt="Stars"/>
   </a>
-  <a href="https://github.com/mehmetdogandev/EMLAKCI-ILE-MUTEAHHIT-PROJESI/network/members">
-    <img src="https://img.shields.io/github/forks/mehmetdogandev/EMLAKCI-ILE-MUTEAHHIT-PROJESI?style=flat-square" alt="Forks"/>
+  <a href="https://github.com/mehmetdogandev/real-estate-contracting-project/network/members">
+    <img src="https://img.shields.io/github/forks/mehmetdogandev/real-estate-contracting-project?style=flat-square" alt="Forks"/>
   </a>
-  <a href="https://github.com/mehmetdogandev/EMLAKCI-ILE-MUTEAHHIT-PROJESI/issues">
-    <img src="https://img.shields.io/github/issues/mehmetdogandev/EMLAKCI-ILE-MUTEAHHIT-PROJESI?style=flat-square" alt="Issues"/>
+  <a href="https://github.com/mehmetdogandev/real-estate-contracting-project/issues">
+    <img src="https://img.shields.io/github/issues/mehmetdogandev/real-estate-contracting-project?style=flat-square" alt="Issues"/>
   </a>
 </div>
