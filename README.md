@@ -70,57 +70,105 @@ Bu proje, emlak ve müteahhitlik sektörüne yönelik modern bir web platformu s
     </tr>
   </table>
 </div>
+# 🏠 Emlak Müteahhitlik Projesi Kurulum Rehberi
 
-## 🛠️ Kurulum
+## 📋 Sistem Gereksinimleri
 
-### Gereksinimler
+- **PHP**: 7.0 veya üzeri
+- **MySQL**: 5.6 veya üzeri
+- **Web Sunucusu**: Apache veya Nginx
+- **Yerel Geliştirme Ortamı**: XAMPP, Laragon, WAMP vb.
 
-- PHP 7.0+
-- MySQL 5.6+
-- Apache/Nginx Web Sunucusu
+## 🚀 Kurulum Adımları
 
-### Adım Adım Kurulum
-
-1. **Repository'i Klonlayın**
+### 1. Projeyi İndirin
 
 ```bash
 git clone https://github.com/mehmetdogandev/real-estate-contracting-project.git
+cd real-estate-contracting-project
 ```
 
-2. **Klasör Adını Değiştirin**
+### 2. Dosyaları Web Sunucusuna Taşıyın
 
+Proje klasörü içindeki **tüm dosya ve klasörleri** kullandığınız yerel sunucunun web dizinine taşıyın:
+
+#### Laragon için:
 ```bash
-mv real-estate-contracting-project proje
+# Hedef dizin
+C:\laragon\www\
 ```
 
-> ⚠️ **ÖNEMLİ:** Projenin düzgün çalışması için klasör adının kesinlikle "proje" olması gerekmektedir, çünkü tüm kod yapısı buna göre tasarlanmıştır.
-
-3. **Veritabanı Kurulumu**
-
-- MySQL üzerinde `emlak` adında yeni bir veritabanı oluşturun
-- SQL dosyasını içe aktarın:
-
+#### XAMPP için:
 ```bash
-mysql -u kullaniciadi -p emlak < proje/db/emlak.sql
+# Hedef dizin
+C:\xampp\htdocs\
 ```
-## Yapılandırma Ayarları
 
-### Veritabanı Bağlantısı
+#### WAMP için:
+```bash
+# Hedef dizin
+C:\wamp64\www\
+```
 
-`vtabani.php` dosyasını açarak aşağıdaki bilgileri kendi ortamınıza göre güncelleyin:
+> ⚠️ **Önemli Not**: Projenin düzgün çalışması için `real-estate-contracting-project` klasörü içindeki tüm dosyaların doğrudan web sunucusunun kök dizinine yerleştirilmesi gerekir.
+
+### 3. Veritabanı Kurulumu
+
+#### MySQL Workbench Kullanıyorsanız:
+1. MySQL Workbench'i açın
+2. Yeni bir bağlantı oluşturun
+3. Aşağıdaki SQL dosyasını içe aktarın:
+   ```sql
+   SOURCE /path/to/www/db/workbanch-emlak.sql;
+   ```
+
+#### phpMyAdmin Kullanıyorsanız:
+1. phpMyAdmin'e giriş yapın
+2. Yeni veritabanı oluşturun:
+   - **Veritabanı Adı**: `emlak`
+   - **Karakter Seti**: `utf8mb4_0900_ai_ci`
+3. Oluşturulan veritabanını seçin
+4. "İçe Aktar" sekmesine gidin
+5. `www/db/phpmyadmin-emlak.sql` dosyasını seçin ve içe aktarın
+
+#### Komut Satırı ile Kurulum:
+```bash
+# Veritabanını oluşturun
+mysql -u root -p -e "CREATE DATABASE emlak CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;"
+
+# SQL dosyasını içe aktarın
+mysql -u root -p emlak < www/db/workbanch-emlak.sql
+```
+
+## ⚙️ Yapılandırma
+
+### Veritabanı Bağlantı Ayarları
+
+`vtabani.php` dosyasını düzenleyerek veritabanı bağlantı bilgilerinizi güncelleyin:
 
 ```php
-define("DBHOST", "localhost"); // Veritabanı sunucusu
-define("DBUSER", "root");      // Veritabanı kullanıcı adı
-define("DBPASS", "");          // Veritabanı şifresi
-define("DBNAME", "emlak");     // Veritabanı adı
-```
+<?php
+// Veritabanı bağlantı ayarları
+define("DBHOST", "localhost");    // Veritabanı sunucu adresi
+define("DBUSER", "root");         // Veritabanı kullanıcı adı
+define("DBPASS", "");             // Veritabanı şifresi (genellikle boş)
+define("DBNAME", "emlak");        // Veritabanı adı
 
+// Bağlantı test kodu (isteğe bağlı)
+try {
+    $pdo = new PDO("mysql:host=".DBHOST.";dbname=".DBNAME.";charset=utf8mb4", DBUSER, DBPASS);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Veritabanı bağlantısı başarılı!";
+} catch(PDOException $e) {
+    echo "Bağlantı hatası: " . $e->getMessage();
+}
+?>
+```
 ### E-posta Ayarları
 
 E-posta gönderim ayarları artık merkezi olarak veritabanında saklanmaktadır.
 
-1. Yönetici panelinde oturum açın: `http://localhost/proje/admin/profil/ayarlar.php`
+1. Yönetici panelinde oturum açın: `http://localhost/admin/profil/ayarlar.php`
 2. Sol menüden **"Ayarlar"** sekmesine gidin.
 3. Ardından **"Mail Ayarları"** sekmesini seçin.
 4. SMTP sunucu adresi, port, e-posta adresi ve şifrenizi girerek ayarları yapılandırın.
@@ -133,12 +181,12 @@ E-posta gönderim ayarları artık merkezi olarak veritabanında saklanmaktadır
 5. **Web Sunucusuna Yükleme**
 
 - Projeyi web sunucusunda erişilebilir bir dizine kopyalayın
-- Tarayıcıdan `http://localhost/proje/` adresine erişin
+- Tarayıcıdan `http://localhost/` adresine erişin
 
 ## 📂 Proje Yapısı
 
 ```
-proje/
+www/ (veya htdocs/)
 │
 ├── admin/                        # Yönetici paneli arayüz dosyaları
 │   ├── index.php                 # Admin giriş sayfası
@@ -170,7 +218,7 @@ proje/
 
 Admin paneline giriş yapabilmek için:
 
-- URL: `http://localhost/proje/admin/`
+- URL: `http://localhost/admin/`
 - Kullanıcı Adı: `test`
 - Şifre: `test`
 
