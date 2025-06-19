@@ -1,4 +1,4 @@
-<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';  ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php';  ?>
 
 <div class="container">
     <div class="page-header">
@@ -198,4 +198,4 @@ class='glyphicon glyphicon glyphicon-remove-circle'></span> Sil</a>";
         });
     });
 </script>
-<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php';  ?>

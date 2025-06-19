@@ -1,4 +1,4 @@
-<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';   ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php';   ?>
 <div class="container">
     <div class="page-header">
         <h1>İlan Listesi</h1>
@@ -168,7 +168,7 @@ WHERE onay='1' AND (urunler.id LIKE :aranan OR evarsa.ilanTuru LIKE :aranan)";
     }
     ?>
 </div> <!-- /container -->
-<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php';  ?>
 <!-- Kayıt silme onay kodları bu alana eklenecek -->
 <script type='text/javascript'>
     // kayıt silme işlemini onayla

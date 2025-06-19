@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php'; ?>
 
 <div class="container">
     <div class="page-header">
@@ -105,9 +105,9 @@
                                                 <tr>
                                                     <td>
                                                         <?php if (!empty($ilan['resim'])): ?>
-                                                            <img src="/proje/content/images/<?php echo htmlspecialchars($ilan['resim']); ?>" style="max-width: 50px; max-height: 50px;" class="img-thumbnail">
+                                                            <img src="/content/images/<?php echo htmlspecialchars($ilan['resim']); ?>" style="max-width: 50px; max-height: 50px;" class="img-thumbnail">
                                                         <?php else: ?>
-                                                            <img src="/proje/content/images/no-image.png" style="max-width: 50px; max-height: 50px;" class="img-thumbnail">
+                                                            <img src="/content/images/no-image.png" style="max-width: 50px; max-height: 50px;" class="img-thumbnail">
                                                         <?php endif; ?>
                                                     </td>
                                                     <td><?php echo htmlspecialchars($ilan['urunadi']); ?></td>
@@ -116,10 +116,10 @@
                                                     <td><?php echo number_format($ilan['fiyat'], 2, ',', '.') . ' TL'; ?></td>
                                                     <td><?php echo date('d.m.Y', strtotime($ilan['giris_tarihi'])); ?></td>
                                                     <td>
-                                                        <a href="/proje/admin/ilan/duzelt.php?id=<?php echo $ilan['id']; ?>" class="btn btn-primary btn-sm">
+                                                        <a href="/admin/ilan/duzelt.php?id=<?php echo $ilan['id']; ?>" class="btn btn-primary btn-sm">
                                                             <i class="fas fa-edit"></i> Düzenle
                                                         </a>
-                                                        <a href="/proje/admin/ilan/detay.php?id=<?php echo $ilan['id']; ?>" class="btn btn-info btn-sm">
+                                                        <a href="/admin/ilan/detay.php?id=<?php echo $ilan['id']; ?>" class="btn btn-info btn-sm">
                                                             <i class="fas fa-eye"></i> Detay
                                                         </a>
                                                     </td>
@@ -158,9 +158,9 @@
                                                 <tr>
                                                     <td>
                                                         <?php if (!empty($proje['resim'])): ?>
-                                                            <img src="/proje/content/images/<?php echo htmlspecialchars($proje['resim']); ?>" style="max-width: 50px; max-height: 50px;" class="img-thumbnail">
+                                                            <img src="/content/images/<?php echo htmlspecialchars($proje['resim']); ?>" style="max-width: 50px; max-height: 50px;" class="img-thumbnail">
                                                         <?php else: ?>
-                                                            <img src="/proje/content/images/no-image.png" style="max-width: 50px; max-height: 50px;" class="img-thumbnail">
+                                                            <img src="/content/images/no-image.png" style="max-width: 50px; max-height: 50px;" class="img-thumbnail">
                                                         <?php endif; ?>
                                                     </td>
                                                     <td><?php echo htmlspecialchars($proje['urunadi']); ?></td>
@@ -168,10 +168,10 @@
                                                     <td><?php echo number_format($proje['fiyat'], 2, ',', '.') . ' TL'; ?></td>
                                                     <td><?php echo date('d.m.Y', strtotime($proje['giris_tarihi'])); ?></td>
                                                     <td>
-                                                        <a href="/proje/admin/projeler/duzelt.php?id=<?php echo $proje['id']; ?>" class="btn btn-primary btn-sm">
+                                                        <a href="/admin/projeler/duzelt.php?id=<?php echo $proje['id']; ?>" class="btn btn-primary btn-sm">
                                                             <i class="fas fa-edit"></i> Düzenle
                                                         </a>
-                                                        <a href="/proje/admin/projeler/detay.php?id=<?php echo $proje['id']; ?>" class="btn btn-info btn-sm">
+                                                        <a href="/admin/projeler/detay.php?id=<?php echo $proje['id']; ?>" class="btn btn-info btn-sm">
                                                             <i class="fas fa-eye"></i> Detay
                                                         </a>
                                                     </td>
@@ -211,7 +211,7 @@
                                                 <tr>
                                                     <td>
                                                         <?php 
-                                                        $profil_resmi = "/proje/admin/profil/profil-image/default-profile.jpg";
+                                                        $profil_resmi = "/admin/profil/profil-image/default-profile.jpg";
                                                         if (!empty($kullanici['profil_resmi'])) {
                                                             $profil_resmi = $kullanici['profil_resmi'];
                                                         }
@@ -234,10 +234,10 @@
                                                         ?>
                                                     </td>
                                                     <td>
-                                                        <a href="/proje/admin/profil/admin_profil.php?kadi=<?php echo $kullanici['kadi']; ?>" class="btn btn-info btn-sm">
+                                                        <a href="/admin/profil/admin_profil.php?kadi=<?php echo $kullanici['kadi']; ?>" class="btn btn-info btn-sm">
                                                             <i class="fas fa-user-circle"></i> Profil
                                                         </a>
-                                                        <a href="/proje/admin/kullanici/duzelt.php?id=<?php echo $kullanici['id']; ?>" class="btn btn-primary btn-sm">
+                                                        <a href="/admin/kullanici/duzelt.php?id=<?php echo $kullanici['id']; ?>" class="btn btn-primary btn-sm">
                                                             <i class="fas fa-edit"></i> Düzenle
                                                         </a>
                                                     </td>
@@ -261,4 +261,4 @@
     ?>
 </div>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php'; ?>

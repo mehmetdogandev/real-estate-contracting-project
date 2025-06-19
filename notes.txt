@@ -1,6 +1,6 @@
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; 
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php'; 
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  
+include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/config/vtabani.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php';  
 
 Yukarda belirttiğim yönlendirmeleri tüm sayfalara sabitledim. Herhangi bir şekilde veritabanı bağlantısı admin dizinlerinde bulunan
 header.php ve footer.php dosyalarında bir problem çıkmayacaktır.

@@ -327,7 +327,7 @@ CREATE TABLE `kullanicilar` (
 
 LOCK TABLES `kullanicilar` WRITE;
 /*!40000 ALTER TABLE `kullanicilar` DISABLE KEYS */;
-INSERT INTO `kullanicilar` VALUES (39,'test','test','test','test@gmail.com','5123456789','/proje/content/images/profil/683ca89e0cf51.jpeg','1'),(44,'Mehmet DOĞAN','mehmetdogandev','mehmetdogandev','mehmetdogan.dev@gmail.com','5535643218',NULL,'2');
+INSERT INTO `kullanicilar` VALUES (39,'test','test','test','test@gmail.com','5123456789','/content/images/profil/683ca89e0cf51.jpeg','1'),(44,'Mehmet DOĞAN','mehmetdogandev','mehmetdogandev','mehmetdogan.dev@gmail.com','5535643218',NULL,'2');
 /*!40000 ALTER TABLE `kullanicilar` ENABLE KEYS */;
 UNLOCK TABLES;
 

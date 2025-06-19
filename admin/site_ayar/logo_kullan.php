@@ -1,6 +1,6 @@
 <?php
 // veritabanı ayar dosyasını dahil et
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/config/vtabani.php'; 
 try {
  // kaydın logo_id bilgisini al
  $logo_id=isset($_GET['logo_id']) ? $_GET['logo_id'] : die('HATA: logo_id bilgisi bulunamadı.');

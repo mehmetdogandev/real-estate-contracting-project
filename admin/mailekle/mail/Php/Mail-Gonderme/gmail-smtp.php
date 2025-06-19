@@ -1,7 +1,7 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php'; ?>
 <?php
 // Mail ayarlarını içe aktar
-include_once $_SERVER['DOCUMENT_ROOT'] . '/proje/config/mail-info.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/config/mail-info.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -157,6 +157,6 @@ if ($_POST) {
         <button type="submit">Toplu Mail Gönder</button>
     </form>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php'; ?>
 </body>
 </html>

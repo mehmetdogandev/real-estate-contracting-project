@@ -2,14 +2,14 @@
 session_start();
 if ($_SESSION["loginkey"] == "") {
     // oturum açılmamışsa login.php sayfasına git
-    header("Location: /proje/admin/login.php");
+    header("Location: /admin/login.php");
 }
 
 // Header dosyasını dahil et
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php'; 
 
 // Mail ayarlarını içe aktar
-include_once $_SERVER['DOCUMENT_ROOT'] . '/proje/config/mail-info.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/config/mail-info.php';
 ?>
 
 <?php
@@ -85,4 +85,4 @@ foreach ($data as $d) {
 }
 ?>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php'; ?>

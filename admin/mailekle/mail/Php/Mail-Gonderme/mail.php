@@ -2,10 +2,10 @@
 
 
 // Header dosyasını dahil et
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php';
 
 // Mail ayarlarını içe aktar
-include_once $_SERVER['DOCUMENT_ROOT'] . '/proje/config/mail-info.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/config/mail-info.php';
 
 // Form gönderildi mi kontrol et
 if (isset($_POST["email"])) {
@@ -92,6 +92,6 @@ if (isset($_POST["email"])) {
         <textarea name="message"></textarea><br>
         <button>Gonder</button>
     </form>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php'; ?>
 </body>
 </html>

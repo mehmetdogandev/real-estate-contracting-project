@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php'; ?>
 
 <?php
 // PHPMailer sınıflarını dahil et
@@ -30,7 +30,7 @@ try {
     $profil_resmi_var = ($tablo_kontrol->rowCount() > 0);
 
     // Profil resmi için varsayılan değer
-    $profil_resmi = "/proje/admin/profil/profil-image/default-profile.jpg";
+    $profil_resmi = "/admin/profil/profil-image/default-profile.jpg";
 
     // Eğer profil_resmi alanı varsa ve dolu ise
     if ($profil_resmi_var && isset($kullanici['profil_resmi']) && !empty($kullanici['profil_resmi'])) {
@@ -93,7 +93,7 @@ if (isset($_POST['profil_guncelle'])) {
                 if ($_FILES["profil_resmi"]["size"] < 5 * 1024 * 1024) {
                     // Benzersiz dosya adı oluşturma
                     $yeni_dosya_adi = uniqid() . "." . $dosya_uzantisi;
-                    $hedef_dizin = $_SERVER['DOCUMENT_ROOT'] . "/proje/content/images/profil/";
+                    $hedef_dizin = $_SERVER['DOCUMENT_ROOT'] . "/content/images/profil/";
                     $hedef_dosya = $hedef_dizin . $yeni_dosya_adi;
 
                     // Dizin kontrolü ve oluşturma
@@ -103,7 +103,7 @@ if (isset($_POST['profil_guncelle'])) {
 
                     // Dosyayı taşıma
                     if (move_uploaded_file($_FILES["profil_resmi"]["tmp_name"], $hedef_dosya)) {
-                        $profil_resmi = "/proje/content/images/profil/" . $yeni_dosya_adi;
+                        $profil_resmi = "/content/images/profil/" . $yeni_dosya_adi;
                         $resim_guncellendi = true;
 
                         // profil_resmi alanı yoksa, ekle
@@ -241,9 +241,9 @@ if (isset($_POST['mail_guncelle'])) {
 // Test e-postası gönderme işlemi
 if (isset($_POST['send_test_mail'])) {
     // PHPMailer dosyalarını dahil et
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/ilan/mailgonder/PHPMailer-6.9.1/src/Exception.php';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/ilan/mailgonder/PHPMailer-6.9.1/src/PHPMailer.php';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/ilan/mailgonder/PHPMailer-6.9.1/src/SMTP.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/admin/ilan/mailgonder/PHPMailer-6.9.1/src/Exception.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/admin/ilan/mailgonder/PHPMailer-6.9.1/src/PHPMailer.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/admin/ilan/mailgonder/PHPMailer-6.9.1/src/SMTP.php';
 
     // Test değerlerini al
     $test_subject = htmlspecialchars(strip_tags($_POST['test_subject']));
@@ -390,7 +390,7 @@ if (isset($_POST['send_test_mail'])) {
                                         <button type="submit" name="profil_guncelle" class="btn btn-primary">
                                             <i class="fas fa-save"></i> Bilgileri Kaydet
                                         </button>
-                                        <a href="/proje/admin/profil/admin_profil.php?kadi=<?php echo $_SESSION["loginkey"]; ?>" class="btn btn-default">
+                                        <a href="/admin/profil/admin_profil.php?kadi=<?php echo $_SESSION["loginkey"]; ?>" class="btn btn-default">
                                             <i class="fas fa-arrow-left"></i> Profile Dön
                                         </a>
                                     </div>
@@ -411,7 +411,7 @@ if (isset($_POST['send_test_mail'])) {
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <p>Şifrenizi değiştirmek için <a href="/proje/admin/profil/sifre_degistir.php" class="btn btn-warning"><i class="fas fa-key"></i> Şifre Değiştir</a> sayfasını ziyaret edebilirsiniz.</p>
+                            <p>Şifrenizi değiştirmek için <a href="/admin/profil/sifre_degistir.php" class="btn btn-warning"><i class="fas fa-key"></i> Şifre Değiştir</a> sayfasını ziyaret edebilirsiniz.</p>
                             <hr>
                             <div class="alert alert-info">
                                 <i class="fas fa-info-circle"></i> <strong>Güvenlik İpucu:</strong> Hesabınızın güvenliği için aşağıdaki önlemleri almanızı öneririz:
@@ -597,4 +597,4 @@ if (isset($_POST['send_test_mail'])) {
     }
 </style>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php'; ?>

@@ -1,4 +1,4 @@
-<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; 
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php'; 
 
 $ilanId = isset($_GET['id']) ? $_GET['id'] : die('HATA: Kayıt bulunamadı.');
 
@@ -138,7 +138,8 @@ class='glyphicon glyphicon glyphicon-remove-circle'></span> Sil</a>";
     </form>
     </td>
 </div> <!-- /container -->
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php';   ?>
+
 <!-- Kayıt silme onay kodları bu alana eklenecek -->
 <script type='text/javascript'>
     // kayıt silme işlemini onayla

@@ -1,6 +1,6 @@
 <?php
 // Mail ayarlarını içe aktar
-include_once $_SERVER['DOCUMENT_ROOT'] . '/proje/config/mail-info.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/config/mail-info.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;

@@ -1,4 +1,4 @@
-<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; 
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php'; 
 // veritabanı bağlantı dosyasını çağır
 $onaySayKullanici = $con->query('SELECT count(*) FROM kullanicilar WHERE onay="0"')->fetchColumn(); 
 $onaySayIlan = $con->query('SELECT count(*) FROM urunler WHERE onay="0"')->fetchColumn(); 
@@ -17,4 +17,4 @@ $onaySayIlan = $con->query('SELECT count(*) FROM urunler WHERE onay="0"')->fetch
 
 	?>
  </div> <!-- /container -->
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php';  ?>

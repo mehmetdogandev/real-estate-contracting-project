@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/config/vtabani.php';
 
 
 // silinecek kayıt bilgilerini oku

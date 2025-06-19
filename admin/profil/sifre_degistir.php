@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php'; ?>
 
 <div class="container">
     <div class="page-header">
@@ -120,7 +120,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fas fa-save"></i> Şifreyi Değiştir
                                 </button>
-                                <a href="/proje/admin/admin_profil.php?kadi=<?php echo $_SESSION["loginkey"]; ?>" class="btn btn-default">
+                                <a href="/admin/admin_profil.php?kadi=<?php echo $_SESSION["loginkey"]; ?>" class="btn btn-default">
                                     <i class="fas fa-arrow-left"></i> Profile Dön
                                 </a>
                             </div>
@@ -147,4 +147,4 @@
     </div>
 </div> <!-- container -->
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php'; ?>

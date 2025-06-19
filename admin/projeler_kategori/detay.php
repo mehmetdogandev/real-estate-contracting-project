@@ -1,4 +1,4 @@
-<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';  ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php';  ?>
 <div class="container">
     <div class="page-header">
         <h1>Kategori Bilgisi</h1>
@@ -56,4 +56,4 @@
         </tr>
     </table>
 </div> <!-- container -->
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php';   ?>

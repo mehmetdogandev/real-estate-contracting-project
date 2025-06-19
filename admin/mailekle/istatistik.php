@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php';
 
 // Bugün gönderilen mail sayısı
 $bugun = date('Y-m-d');
@@ -739,5 +739,5 @@ $(document).ready(function() {
 </script>
 
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php';
 ?>

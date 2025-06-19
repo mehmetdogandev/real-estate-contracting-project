@@ -3,7 +3,7 @@
 
 // Eğer veritabanı bağlantısı yoksa, bağlantıyı kur
 if (!isset($con)) {
-    include_once $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php';
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/config/vtabani.php';
 }
 
 // Aktif mail ayarlarını veritabanından çek

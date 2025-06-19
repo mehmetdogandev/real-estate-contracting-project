@@ -2,13 +2,13 @@
 session_start();
 if ($_SESSION["loginkey"] == "") {
   // oturum açılmamışsa login.php sayfasına git
-  header("Location: /proje/admin/login.php");
+  header("Location: /admin/login.php");
 }
 ?>
 
 <?php
 // veritabanı ayar dosyasını dahil et
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/config/vtabani.php'; 
 try {
   // kaydın slider_id bilgisini al
   $slider_id = isset($_GET['slider_id']) ? $_GET['slider_id'] : die('HATA: slider_id bilgisi bulunamadı.');

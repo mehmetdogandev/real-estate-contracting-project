@@ -2,7 +2,7 @@
  session_start();
  if ($_SESSION["loginkey"] == "") {
  // oturum açılmamışsa login.php sayfasına git
- header("Location: /proje/admin/login.php");
+ header("Location: /admin/login.php");
  }
 ?>
 

@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php'; ?>
 
 <div class="container">
     <div class="page-header">
@@ -54,7 +54,7 @@
         $profil_resmi_var = ($tablo_kontrol->rowCount() > 0);
 
         // Profil resmi için varsayılan değer ata
-        $profil_resmi = "/proje/admin/profil/profil-image/default-profile.jpg";
+        $profil_resmi = "/admin/profil/profil-image/default-profile.jpg";
         
         // Eğer profil_resmi alanı varsa ve dolu ise
         if ($profil_resmi_var && isset($kayit['profil_resmi']) && !empty($kayit['profil_resmi'])) {
@@ -170,8 +170,8 @@
 
                     <?php if (isset($_SESSION["loginkey"]) && $_SESSION["loginkey"] == $kadi): ?>
                         <div class="btn-group btn-group-justified" role="group" style="margin-top: 20px;">
-                            <a href="/proje/admin/profil/ayarlar.php" class="btn btn-info"><i class="fas fa-edit"></i> Profili Düzenle</a>
-                            <a href="/proje/admin/profil/sifre_degistir.php" class="btn btn-warning"><i class="fas fa-key"></i> Şifre Değiştir</a>
+                            <a href="/admin/profil/ayarlar.php" class="btn btn-info"><i class="fas fa-edit"></i> Profili Düzenle</a>
+                            <a href="/admin/profil/sifre_degistir.php" class="btn btn-warning"><i class="fas fa-key"></i> Şifre Değiştir</a>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -251,7 +251,7 @@
                                         }
 
                                         echo '<tr>';
-                                        echo '<td><a href="/proje/admin/ilan/guncelle.php?id=' . $ilan['id'] . '">'
+                                        echo '<td><a href="/admin/ilan/guncelle.php?id=' . $ilan['id'] . '">'
                                             . htmlspecialchars($ilan['urunadi']) . '</a></td>';
                                         echo '<td>' . htmlspecialchars($ilan['kategori_adi']) . '</td>';
                                         echo '<td>' . date('d.m.Y', strtotime($ilan['giris_tarihi'])) . '</td>';
@@ -297,7 +297,7 @@
                                         }
 
                                         echo '<tr>';
-                                        echo '<td><a href="/proje/admin/projeler/guncelle.php?id=' . $proje['id'] . '">'
+                                        echo '<td><a href="/admin/projeler/guncelle.php?id=' . $proje['id'] . '">'
                                             . htmlspecialchars($proje['urunadi']) . '</a></td>';
                                         echo '<td>' . htmlspecialchars($proje['kategori_adi']) . '</td>';
                                         echo '<td>' . date('d.m.Y', strtotime($proje['giris_tarihi'])) . '</td>';
@@ -317,4 +317,4 @@
     </div>
 </div> <!-- container -->
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php'; ?>

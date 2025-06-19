@@ -19,17 +19,17 @@ function imageToBase64($imagePath)
 $ilanId = isset($_GET['id']) ? $_GET['id'] : die('HATA: İlan bulunamadı.');
 $kisiler = isset($_GET['kisiler']) ? $_GET['kisiler'] : die('HATA: Kişiler bulunamadı.');
 
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/mail-info.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/config/vtabani.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/config/mail-info.php';
 
 
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/ilan/mailgonder/PHPMailer-6.9.1/src/Exception.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/ilan/mailgonder/PHPMailer-6.9.1/src/PHPMailer.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/ilan/mailgonder/PHPMailer-6.9.1/src/SMTP.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/admin/ilan/mailgonder/PHPMailer-6.9.1/src/Exception.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/admin/ilan/mailgonder/PHPMailer-6.9.1/src/PHPMailer.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/admin/ilan/mailgonder/PHPMailer-6.9.1/src/SMTP.php';
 
 $bugun = date('m-d'); // Yalnızca ay ve günü kontrol edeceğiz
 

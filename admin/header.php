@@ -2,9 +2,9 @@
 session_start();
 if ($_SESSION["loginkey"] == "") {
     // oturum açılmamışsa login.php sayfasına git
-    header("Location: /proje/admin/login.php");
+    header("Location: /admin/login.php");
 }
-include $_SERVER['DOCUMENT_ROOT'] . '/proje/config/vtabani.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/config/vtabani.php';
 // Okunmamış mesaj sayısını çekme
 $bildirim_sorgu = $con->prepare("SELECT COUNT(*) as sayi FROM kullanicilar_mesaj WHERE k_msj_kime = :kime");
 $bildirim_sorgu->bindParam(':kime', $_SESSION["loginkey"], PDO::PARAM_STR);
@@ -42,10 +42,10 @@ $kullanici = $kullanici_sorgu->fetch(PDO::FETCH_ASSOC);
     <title>Emlak & Müteahit - Proje</title>
     <!-- Bootstrap CSS dosyası -->
     <!-- jQuery ve Bootstrap için gerekli dosyalar -->
-    <script src="/proje/content/js/jquery-3.3.1.min.js"></script>
-    <script src="/proje/content/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/proje/content/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/proje/content/css/style.css" />
+    <script src="/content/js/jquery-3.3.1.min.js"></script>
+    <script src="/content/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/content/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/content/css/style.css" />
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Bootstrap CSS -->
@@ -329,20 +329,20 @@ $kullanici = $kullanici_sorgu->fetch(PDO::FETCH_ASSOC);
                     <!-- Sol Navigasyon Öğeleri -->
                     <ul class="nav navbar-nav">
                         <li <?php echo (strpos($aktif_link, '/admin/index') !== false ? 'class="active"' : ''); ?>>
-                            <a href="/proje/admin/index.php"><i class="fas fa-home"></i> Anasayfa</a>
+                            <a href="/admin/index.php"><i class="fas fa-home"></i> Anasayfa</a>
                         </li>
                         <li <?php echo (strpos($aktif_link, '/admin/projeler/liste') !== false ? 'class="active"' : ''); ?>>
-                            <a href="/proje/admin/projeler/liste.php"><i class="fas fa-project-diagram"></i> Projeler</a>
+                            <a href="/admin/projeler/liste.php"><i class="fas fa-project-diagram"></i> Projeler</a>
                         </li>
                         <li class="dropdown <?php echo (strpos($aktif_link, '/admin/ilan/liste') !== false ? 'active' : ''); ?>">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-ad"></i> İlanlar <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="/proje/admin/ilan/liste.php"><i class="fas fa-list"></i> Tüm İlanlar</a></li>
+                                <li><a href="/admin/ilan/liste.php"><i class="fas fa-list"></i> Tüm İlanlar</a></li>
                                 <li class="divider"></li>
-                                <li><a href="/proje/admin/ilan/ekle_ev.php"><i class="fas fa-plus-square"></i> Yeni Ev İlanı Ekle</a></li>
-                                <li><a href="/proje/admin/ilan/ekle_arsa.php"><i class="fas fa-plus-square"></i> Yeni Arsa İlanı Ekle</a></li>
+                                <li><a href="/admin/ilan/ekle_ev.php"><i class="fas fa-plus-square"></i> Yeni Ev İlanı Ekle</a></li>
+                                <li><a href="/admin/ilan/ekle_arsa.php"><i class="fas fa-plus-square"></i> Yeni Arsa İlanı Ekle</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -351,10 +351,10 @@ $kullanici = $kullanici_sorgu->fetch(PDO::FETCH_ASSOC);
                             </a>
                             <ul class="dropdown-menu">
                                 <li <?php echo (strpos($aktif_link, '/admin/projeler_kategori/liste') !== false ? 'class="active"' : ''); ?>>
-                                    <a href="/proje/admin/projeler_kategori/liste.php"><i class="fas fa-tags"></i> Proje Kategorileri</a>
+                                    <a href="/admin/projeler_kategori/liste.php"><i class="fas fa-tags"></i> Proje Kategorileri</a>
                                 </li>
                                 <li <?php echo (strpos($aktif_link, '/admin/kategori/liste') !== false ? 'class="active"' : ''); ?>>
-                                    <a href="/proje/admin/kategori/liste.php"><i class="fas fa-list"></i> İlan Kategorileri</a>
+                                    <a href="/admin/kategori/liste.php"><i class="fas fa-list"></i> İlan Kategorileri</a>
                                 </li>
                             </ul>
                         </li>
@@ -364,11 +364,11 @@ $kullanici = $kullanici_sorgu->fetch(PDO::FETCH_ASSOC);
                                 <i class="fas fa-ad"></i> Kullanıcılar <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="/proje/admin/kullanici/liste.php"><i class="fas fa-list"></i> Tüm Kullanıcılar</a></li>
+                                <li><a href="/admin/kullanici/liste.php"><i class="fas fa-list"></i> Tüm Kullanıcılar</a></li>
                                 <li class="divider"></li>
-                                <li><a href="/proje/admin/kullanici/onay.php"><i class="fas fa-plus-square"></i> Onay Bekleyen Kullanıcılar</a></li>
+                                <li><a href="/admin/kullanici/onay.php"><i class="fas fa-plus-square"></i> Onay Bekleyen Kullanıcılar</a></li>
 
-                                <li><a href="/proje/admin/kullanici/ekle.php"><i class="fas fa-plus-square"></i> Yeni Kullanıcı Ekle</a></li>
+                                <li><a href="/admin/kullanici/ekle.php"><i class="fas fa-plus-square"></i> Yeni Kullanıcı Ekle</a></li>
 
                             </ul>
                         </li> <li class="dropdown <?php echo (strpos($aktif_link, '/admin/ilan/liste') !== false ? 'active' : ''); ?>">
@@ -376,18 +376,18 @@ $kullanici = $kullanici_sorgu->fetch(PDO::FETCH_ASSOC);
                                 <i class="fas fa-ad"></i> E-Posta İşlemleri <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="/proje/admin/mailekle/liste.php"><i class="fas fa-list"></i> Kayıtlı Mailler</a></li>
+                                <li><a href="/admin/mailekle/liste.php"><i class="fas fa-list"></i> Kayıtlı Mailler</a></li>
                                 <li class="divider"></li>
-                                <li><a href="/proje/admin/mailekle/ekle_mail.php"><i class="fas fa-plus-square"></i> Sisteme Yeni Mail Ekle</a></li>
+                                <li><a href="/admin/mailekle/ekle_mail.php"><i class="fas fa-plus-square"></i> Sisteme Yeni Mail Ekle</a></li>
 
-                                <li><a href="/proje/admin/mailekle/istatistik.php"><i class="fas fa-plus-square"></i> Gönderilen Mail İstatistikleri</a></li>
+                                <li><a href="/admin/mailekle/istatistik.php"><i class="fas fa-plus-square"></i> Gönderilen Mail İstatistikleri</a></li>
 
                             </ul>
                         </li>
                     </ul>
 
                     <!-- Arama Formu -->
-                    <form class="navbar-form" action="/proje/admin/arama.php" method="GET">
+                    <form class="navbar-form" action="/admin/arama.php" method="GET">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Proje, ilan veya kullanıcı ara..." name="q">
                             <span class="input-group-btn">
@@ -411,12 +411,12 @@ $kullanici = $kullanici_sorgu->fetch(PDO::FETCH_ASSOC);
                             <ul class="dropdown-menu">
                                 <li class="dropdown-header">Mesajlar</li>
                                 <?php if ($bildirim_sayisi > 0) : ?>
-                                    <li><a href="/proje/admin/mesaj/liste.php"><i class="fas fa-envelope"></i> <?php echo $bildirim_sayisi; ?> yeni mesaj</a></li>
+                                    <li><a href="/admin/mesaj/liste.php"><i class="fas fa-envelope"></i> <?php echo $bildirim_sayisi; ?> yeni mesaj</a></li>
                                 <?php else : ?>
                                     <li><a href="#">Yeni mesaj yok</a></li>
                                 <?php endif; ?>
                                 <li class="divider"></li>
-                                <li><a href="/proje/admin/mesaj/liste.php">Tüm mesajları gör</a></li>
+                                <li><a href="/admin/mesaj/liste.php">Tüm mesajları gör</a></li>
                             </ul>
                         </li>
                         <!-- Hızlı İşlemler -->
@@ -429,26 +429,26 @@ $kullanici = $kullanici_sorgu->fetch(PDO::FETCH_ASSOC);
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-header">Hızlı İşlemler</li>
-                                <li><a href="/proje/admin/projeler/ekle_proje.php"><i class="fas fa-plus-circle"></i> Yeni Proje Ekle</a></li>
+                                <li><a href="/admin/projeler/ekle_proje.php"><i class="fas fa-plus-circle"></i> Yeni Proje Ekle</a></li>
                                 <li class="dropdown-submenu">
                                     <a href="#"><i class="fas fa-plus-square"></i> Yeni İlan Ekle</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="/proje/admin/ilan/ekle_ev.php"><i class="fas fa-home"></i> Ev İlanı Ekle</a></li>
-                                        <li><a href="/proje/admin/ilan/ekle_arsa.php"><i class="fas fa-map"></i> Arsa İlanı Ekle</a></li>
+                                        <li><a href="/admin/ilan/ekle_ev.php"><i class="fas fa-home"></i> Ev İlanı Ekle</a></li>
+                                        <li><a href="/admin/ilan/ekle_arsa.php"><i class="fas fa-map"></i> Arsa İlanı Ekle</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="/proje/admin/kullanici/ekle.php"><i class="fas fa-user-plus"></i> Yeni Kullanıcı Ekle</a></li>
+                                <li><a href="/admin/kullanici/ekle.php"><i class="fas fa-user-plus"></i> Yeni Kullanıcı Ekle</a></li>
                                 <li class="divider"></li>
-                                <li><a href="/proje/admin/ilan/onay.php"><i class="fas fa-check-circle"></i> Onay Bekleyen İlanlar (<?php echo $onay_ilan_bekleyen; ?>)</a></li>
-                                <li><a href="/proje/admin/projeler/onay.php"><i class="fas fa-check-double"></i> Onay Bekleyen Projeler (<?php echo $onay_proje_bekleyen; ?>)</a></li>
-                                <li><a href="/proje/admin/kullanici/onay.php"><i class="fas fa-user-check"></i> Onay Bekleyen Kullanıcılar (<?php echo $onay_kullanici_bekleyen; ?>)</a></li>
+                                <li><a href="/admin/ilan/onay.php"><i class="fas fa-check-circle"></i> Onay Bekleyen İlanlar (<?php echo $onay_ilan_bekleyen; ?>)</a></li>
+                                <li><a href="/admin/projeler/onay.php"><i class="fas fa-check-double"></i> Onay Bekleyen Projeler (<?php echo $onay_proje_bekleyen; ?>)</a></li>
+                                <li><a href="/admin/kullanici/onay.php"><i class="fas fa-user-check"></i> Onay Bekleyen Kullanıcılar (<?php echo $onay_kullanici_bekleyen; ?>)</a></li>
                             </ul>
                         </li>
 
                         <?php
                         // Profil resmi kontrolü
                         $profil_resmi_var = false;
-                        $profil_resmi = "/proje/admin/profil/profil-image/default-profile.jpg"; // Varsayılan resim
+                        $profil_resmi = "/admin/profil/profil-image/default-profile.jpg"; // Varsayılan resim
 
                         // Veritabanında profil_resmi alanının olup olmadığını kontrol et
                         $tablo_kontrol = $con->prepare("SHOW COLUMNS FROM kullanicilar LIKE 'profil_resmi'");
@@ -468,11 +468,11 @@ $kullanici = $kullanici_sorgu->fetch(PDO::FETCH_ASSOC);
                                 <span><?php echo $_SESSION["loginkey"]; ?> <span class="caret"></span></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="/proje/admin/profil/admin_profil.php?kadi=<?php echo $_SESSION["loginkey"]; ?>"><i class="fas fa-user-circle"></i> Profilim</a></li>
-                                <li><a href="/proje/admin/profil/ayarlar.php"><i class="fas fa-cog"></i> Ayarlar</a></li>
-                                <li><a href="/proje/admin/profil/sifre_degistir.php"><i class="fas fa-key"></i> Şifre Değiştir</a></li>
+                                <li><a href="/admin/profil/admin_profil.php?kadi=<?php echo $_SESSION["loginkey"]; ?>"><i class="fas fa-user-circle"></i> Profilim</a></li>
+                                <li><a href="/admin/profil/ayarlar.php"><i class="fas fa-cog"></i> Ayarlar</a></li>
+                                <li><a href="/admin/profil/sifre_degistir.php"><i class="fas fa-key"></i> Şifre Değiştir</a></li>
                                 <li class="divider"></li>
-                                <li><a href="/proje/admin/login.php?cikis=1" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Oturumu Kapat</a></li>
+                                <li><a href="/admin/login.php?cikis=1" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Oturumu Kapat</a></li>
                             </ul>
                         </li>
 

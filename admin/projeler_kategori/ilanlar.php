@@ -1,4 +1,4 @@
-<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php';  ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php';  ?>
 <div class="container">
     <div class="page-header">
         <h1>İlan Listesi</h1>
@@ -64,4 +64,4 @@ class='glyphicon glyphicon glyphicon glyphicon-list'></span> Kategori listesi</a
 
 
 </div> <!-- /container -->
-<?php  include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';  ?>
+<?php  include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php';  ?>

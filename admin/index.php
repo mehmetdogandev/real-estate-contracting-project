@@ -1,5 +1,5 @@
 <?php
- include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/header.php'; 
+ include $_SERVER['DOCUMENT_ROOT'] . '/admin/header.php'; 
 // Veritabanını çağırıyoruz
 
 // Sadece üyeleri sayan sorgu - kullanici onay = 2 olanları sayıyorum
@@ -105,4 +105,4 @@ $admin_mesaj_Say = $con->query('SELECT count(*) FROM admin_mesajlar')->fetchColu
     </div>
 </div> <!-- /container -->
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/proje/admin/footer.php';   ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/admin/footer.php';   ?>
