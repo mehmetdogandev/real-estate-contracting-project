@@ -4,7 +4,7 @@
 	try {
 		// slider-1 için seçme sorgusunu hazırla
 		$sorgu = "SELECT * FROM slider WHERE slider_k_durum='1'";
-		$stmt = $con->prepare($sorgu);
+		$stmt = $con->prepare(query: $sorgu);
 		// slider-1 için sorguyu çalıştır
 		$stmt->execute();
 		//slider-2 için seçme sorgusunu hazırla

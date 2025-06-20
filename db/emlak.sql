@@ -1709,7 +1709,7 @@ CREATE TABLE
     `kadi` varchar(20) NOT NULL,
     `sifre` varchar(20) NOT NULL,
     `eposta` varchar(70) NOT NULL,
-    `tel_no` varchar(10) NOT NULL,
+    `tel_no` varchar(13) NOT NULL,
     `profil_resmi` varchar(255) DEFAULT NULL,
     `onay` varchar(1) NOT NULL DEFAULT '0',
     PRIMARY KEY (`id`),
