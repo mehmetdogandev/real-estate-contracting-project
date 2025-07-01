@@ -1,10 +1,9 @@
 <?php
 if($_POST){
  // veritabanı yapılandırma dosyasını dahil et
- include 'config/vtabani.php';
- 
+include $_SERVER['DOCUMENT_ROOT'] . '/config/vtabani.php'; 
  if($_POST['adsoyad']=="" || $_POST['kadi']=="" || $_POST['sifre']=="" || $_POST['eposta']=="" || $_POST['tel_no']==""){
-	 header("Location: kayit.php?islem=bosluk");
+	 header("Location: /register/?islem=bosluk");
  }
  else{
  try{
@@ -27,9 +26,9 @@ sifre=:sifre, eposta=:eposta, tel_no=:tel_no";
  $stmt->bindParam(':tel_no', $tel_no);
  // sorguyu çalıştır
  if($stmt->execute()){
- header("Location: kayit.php?islem=basarili");
+ header("Location: /register/?islem=basarili");
  }else{
- header("Location: kayit.php?islem=basarisiz");
+ header("Location: /register/?islem=basarisiz");
  }
  }
  // hatayı göster

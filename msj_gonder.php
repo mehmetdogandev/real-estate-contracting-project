@@ -2,7 +2,7 @@
 include "header.php";
  if ($_SESSION["kullanici_loginkey"] == "") {
  // oturum açılmamışsa uyarı yap
- header("Location: kayit.php?islem=mesaj_gonderemez");
+ header("Location: /register/?islem=mesaj_gonderemez");
  }
  
  $konu = isset($_GET['konu']) ? $_GET['konu'] : "";

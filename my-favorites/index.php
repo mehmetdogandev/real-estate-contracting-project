@@ -1,9 +1,11 @@
-<?php include "header.php";
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 // favori boşsa uyar
 if (!isset($_SESSION['favori']) || empty($_SESSION['favori'])) {
     echo "<br/>
- <div class='container mt-5 mb-5'><div class='col-md-12'><div class='alert alert-danger'>
- Favorilerinize eklenmiş bir ürün yok!</div></div></div><br/><br/>";
+ <div class='container mt-5 mb-5'><div class='col-md-12'><div class='alert alert-danger text-center shadow-sm rounded-4 p-4 fs-5'>
+ <i class='fas fa-heart-broken fa-lg me-2 text-danger'></i>
+ Favorilerinize eklenmiş bir ürün yok!
+ </div></div></div><br/><br/>";
 }
 // favori boş değilse ürünleri listele
 else {
@@ -19,8 +21,7 @@ else {
         $ids_arr = 0;
     }
 
-    // veritabanı yapılandırma dosyasını dahil et
-    include 'config/vtabani.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/config/vtabani.php'; 
     // favorideki ürünleri getiren sorgu
     $sorgu = "SELECT urunler.id, urunler.urunadi, kategoriler.kategoriadi, il.sehir, ilce.ilce, urunler.fiyat, urunler.resim, urunler.evarsa_id 
  FROM urunler 
@@ -34,16 +35,65 @@ else {
     $stmt->execute($ids);
 
 ?>
+    <style>
+        .favori-tablo th {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+        .favori-tablo td {
+            vertical-align: middle;
+            background: #f8fafc;
+            border: none;
+            font-size: 15px;
+        }
+        .favori-tablo tr {
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(59,130,246,0.04);
+        }
+        .favori-tablo img {
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+        }
+        .favori-tablo .urun-sil {
+            color: #ef4444;
+            transition: color 0.2s;
+        }
+        .favori-tablo .urun-sil:hover {
+            color: #b91c1c;
+            text-decoration: none;
+        }
+        .favori-baslik {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: #fff;
+            border-radius: 18px 18px 0 0;
+            padding: 24px 0 16px 0;
+            margin-bottom: 0;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(30,64,175,0.08);
+        }
+        @media (max-width: 576px) {
+            .favori-tablo th, .favori-tablo td {
+                font-size: 13px;
+                padding: 8px 4px;
+            }
+            .favori-baslik {
+                font-size: 1.2rem;
+                padding: 16px 0 10px 0;
+            }
+        }
+    </style>
     <div class="container mt-4 mb-5">
-        <!-- favorideki ürünleri görüntüleyen HTML tablosu burada yer alacak -->
-        <div class="baslik">
-            <h3>Favorilerim</h3>
+        <div class="favori-baslik mb-0">
+            <h3 class="mb-0"><i class="fas fa-heart me-2"></i>Favorilerim</h3>
         </div>
-        <!-- favorideki ürünleri görüntüleyen HTML tablosu -->
-
-        <div class="table-responsive">
-            <table class="table table-bordered favori-tablo">
-                <thead class="bg-light">
+        <div class="table-responsive shadow rounded-bottom-4">
+            <table class="table table-bordered favori-tablo mb-0">
+                <thead>
                     <tr>
                         <th>Resim</th>
                         <th>Başlık</th>
@@ -54,7 +104,6 @@ else {
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- İlanları listeleyen döngü kodları burada yer alacak -->
                     <?php
                     $urun_toplami = 0;
                     $urun_sayisi = 0;
@@ -70,13 +119,13 @@ else {
                                 <?php echo $resim ? "<img src='content/images/{$resim}' alt='{$urunadi}' class='img-fluid img-thumbnail' width='80' />" : "<img src='content/images/gorsel-yok.jpg' class='img-fluid img-thumbnail' width='80' />"; ?>
                             </td>
                             <td class="text-left">
-                                <h6><a href="urundetay.php?id=<?php echo $id; ?>" class="link2"><?php echo $urunadi; ?></a></h6>
+                                <h6 class="mb-1"><a href="/urundetay.php?id=<?php echo $id; ?>" class="link2 text-primary fw-semibold"><?php echo $urunadi; ?></a></h6>
                             </td>
                             <td>
-                                <h6><?php echo $sehir . "/" . $ilce; ?></h6>
+                                <h6 class="mb-1"><?php echo $sehir . "/" . $ilce; ?></h6>
                             </td>
                             <td>
-                                <h6><?php
+                                <h6 class="mb-1"><?php
                                     if ($evarsa_id == "1") {
                                         $evORarsa = "Ev";
                                     } else if ($evarsa_id == "2") {
@@ -85,10 +134,14 @@ else {
                                     echo $kategoriadi . " " . $evORarsa; ?></h6>
                             </td>
                             <td>
-                                <h6><?php echo number_format($fiyat, 0, ',', '.'); ?>&#8378;</h6>
+                                <span class="badge bg-gradient" style="background: linear-gradient(45deg,#f59e0b,#fbbf24); color:#fff; font-size:15px;">
+                                    <?php echo number_format($fiyat, 0, ',', '.'); ?>&#8378;
+                                </span>
                             </td>
                             <td>
-                                <h6><a href="#" class="link2 urun-sil" id="<?php echo $id; ?>"><i class="fa fa-trash fa-2x"></i></a></h6>
+                                <a href="#" class="link2 urun-sil" id="<?php echo $id; ?>" title="Favorilerden Kaldır">
+                                    <i class="fa fa-trash fa-lg"></i>
+                                </a>
                             </td>
                         </tr>
                     <?php
@@ -96,9 +149,8 @@ else {
                     ?>
                 </tbody>
             </table>
-        </div><!--/favorideki ürünler son-->
-
+        </div>
     </div>
 <?php
 }
-include "footer.php"; ?>
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>
